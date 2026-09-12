@@ -1,0 +1,221 @@
+/* ==========================================================================
+   Footer Component Styles
+   Light theme: Clean White #FFFFFF surface with crisp typography
+   Dark theme: Seamlessly adapts via CSS custom properties
+   ========================================================================== */
+
+.site-footer {
+  background-color: var(--bg-surface);
+  color: var(--text-body);
+  padding-top: var(--space-80);
+  padding-bottom: var(--space-32);
+  border-top: 1px solid var(--border-color);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-brand-col {
+  margin-bottom: var(--space-32);
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  margin-bottom: var(--space-16);
+}
+
+.footer-logo:hover .brand-logo-icon {
+  transform: scale(1.05);
+  background: #111314;
+}
+
+.footer-logo .brand-name {
+  color: var(--text-heading);
+}
+
+.footer-tagline-text {
+  font-size: 0.9375rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: var(--space-24);
+  max-width: 320px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+/* Keep SVG brand fill colors — don't inherit the button text color */
+.footer-social-btn svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+.footer-social-btn:hover {
+  background: rgba(232, 93, 42, 0.08);
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(232, 93, 42, 0.18);
+}
+
+/* Footer Link Columns */
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: var(--space-24);
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav-link {
+  font-size: 0.9375rem;
+  color: var(--text-body);
+  text-decoration: none;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-nav-link:hover {
+  color: var(--color-primary);
+  padding-left: 4px;
+}
+
+/* Contact Info list in footer */
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 0.9375rem;
+  color: var(--text-body);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact-item i {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+/* Newsletter in footer */
+.footer-newsletter-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.footer-newsletter-input {
+  flex-grow: 1;
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  color: var(--text-heading);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.footer-newsletter-input:focus {
+  border-color: var(--color-primary);
+  background: var(--bg-surface);
+}
+
+.footer-newsletter-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  margin-top: var(--space-64);
+  padding-top: var(--space-32);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-bottom-links a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 576px) {
+  .site-footer > .site-container > .row.g-4 > [class*="col-"] {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .site-footer > .site-container > .row.g-4 {
+    row-gap: 40px;
+  }
+
+  .footer-newsletter-form,
+  .footer-bottom,
+  .footer-bottom-links {
+    width: 100%;
+  }
+
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

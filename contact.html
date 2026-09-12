@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Flagship Store Location | VeloPeak Cycles</title>
+  <meta name="description" content="Contact VeloPeak Cycles. Visit our 4,000 sq ft showroom and workshop in the Cycle District, book a service appointment, or request test rides.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/bikes.css">
+  <link rel="stylesheet" href="css/accessories.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="site-container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html" id="brand-logo-link">
+          <div class="brand-logo-icon"><i class="bi bi-bicycle"></i></div>
+          <div class="brand-text-group">
+            <span class="brand-name">VeloPeak <span>Cycles</span></span>
+            <span class="brand-tagline">Ride Further. Ride Better.</span>
+          </div>
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarMain">
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="bikes.html">Bikes</a></li>
+            <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Repair Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="header-actions">
+          <a href="login.html" class="btn-custom btn-secondary-custom btn-sm-custom d-none d-sm-inline-flex">
+            <i class="bi bi-person"></i> Login
+          </a>
+          <a href="bikes.html" class="header-action-btn" title="View Cart">
+            <i class="bi bi-bag"></i>
+            <span class="badge-pill cart-count-badge">2</span>
+          </a>
+          <button type="button" class="header-action-btn theme-toggle-btn" title="Toggle Dark/Light Mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button type="button" class="header-action-btn rtl-toggle-btn" title="Toggle RTL/LTR">
+            <span>RTL</span>
+          </button>
+          <button class="navbar-toggler header-action-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-logo-icon" style="width:36px;height:36px;font-size:1.1rem;"><i class="bi bi-bicycle"></i></div>
+        <span class="brand-name fs-5">VeloPeak <span>Cycles</span></span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column mb-4">
+        <a class="offcanvas-nav-link" href="index.html">Home 1 <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="home-2.html">Home 2 <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="about.html">About <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="bikes.html">Bikes <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="accessories.html">Accessories <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="services.html">Repair Services <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="brands.html">Brands <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link active" href="contact.html">Contact <i class="bi bi-chevron-right"></i></a>
+      </div>
+      <div class="mt-auto pt-3 border-top header-actions-drawer">
+        <a href="login.html" class="btn-custom btn-secondary-custom btn-sm-custom">
+          <i class="bi bi-person"></i> Login
+        </a>
+        <a href="bikes.html" class="header-action-btn" title="View Cart">
+          <i class="bi bi-bag"></i>
+          <span class="badge-pill cart-count-badge">2</span>
+        </a>
+        <button type="button" class="header-action-btn theme-toggle-btn" title="Toggle Dark/Light Mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button type="button" class="header-action-btn rtl-toggle-btn" title="Toggle RTL/LTR">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== PAGE BANNER ==================== -->
+    <section class="page-banner">
+      <img src="assets/images/hero/contact-banner.png" alt="VeloPeak Showroom Entrance" class="page-banner-bg">
+      <div class="site-container">
+        <div class="page-banner-content">
+          <nav class="breadcrumb-nav">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>Contact & Store</span>
+          </nav>
+          <h1 class="page-banner-title">Visit Our Bicycle Store & Workshop</h1>
+          <p class="page-banner-subtitle">
+            Whether you want to test ride a carbon road bike, book a master tune-up, or talk gear with our mechanics, our doors are open 7 days a week.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1. CONTACT INFO CARDS ==================== -->
+    <section class="section-padding">
+      <div class="site-container">
+        <div class="row g-4 contact-info-grid">
+          <!-- Card 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card text-center contact-info-card">
+              <div class="feature-icon-wrapper mx-auto"><i class="bi bi-geo-alt-fill"></i></div>
+              <h4 class="feature-title">Store Address</h4>
+              <p class="feature-desc mb-3">742 Velodrome Way<br>Cycle District, CA 94107</p>
+              <a href="#store-map" class="text-primary fw-bold contact-card-link">View on Map <i class="bi bi-arrow-down"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card text-center contact-info-card">
+              <div class="feature-icon-wrapper mx-auto"><i class="bi bi-telephone-fill"></i></div>
+              <h4 class="feature-title">Sales & Showroom</h4>
+              <p class="feature-desc mb-3">(555) 835-6732<br>sales@velopeakcycles.com</p>
+              <a href="tel:5558356732" class="text-primary fw-bold contact-card-link">Call Showroom</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card text-center contact-info-card">
+              <div class="feature-icon-wrapper mx-auto"><i class="bi bi-wrench-adjustable"></i></div>
+              <h4 class="feature-title">Repair Workshop</h4>
+              <p class="feature-desc mb-3">(555) 835-6733<br>service@velopeakcycles.com</p>
+              <a href="services.html" class="text-primary fw-bold contact-card-link">Service Menu</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card text-center contact-info-card">
+              <div class="feature-icon-wrapper mx-auto"><i class="bi bi-clock-fill"></i></div>
+              <h4 class="feature-title">Opening Hours</h4>
+              <p class="feature-desc mb-3">Mon–Sat: 9 AM – 7 PM<br>Sun: 10 AM – 5 PM</p>
+              <a href="#store-map" class="text-primary fw-bold contact-card-link">Plan Your Visit <i class="bi bi-arrow-down"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. STORE LOCATION & INTERACTIVE MAP MOCKUP ==================== -->
+    <section class="section-padding bg-light border-top border-bottom" id="store-map">
+      <div class="site-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <span class="section-badge"><i class="bi bi-map-fill"></i> Easy Access</span>
+            <h2 class="section-title">Flagship Showroom & Test Track</h2>
+            <p class="text-body mb-4">
+              Conveniently situated right along the Velodrome Greenway bike path with dedicated rider parking, secure bike racks, and complimentary water/espresso bar.
+            </p>
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-p-circle fs-4 text-primary"></i>
+                <div><strong>Free Customer Parking:</strong> 30 dedicated spaces at the rear entrance.</div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <i class="bi bi-bicycle fs-4 text-primary"></i>
+                <div><strong>Direct Path Access:</strong> Connects directly to the 40-mile Bay Trail.</div>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <a href="services.html" class="btn-custom btn-primary-custom" id="contact-book-btn">Book a Service</a>
+              <a href="https://maps.google.com" target="_blank" class="btn-custom btn-secondary-custom" id="contact-directions-btn">Get Directions</a>
+            </div>
+          </div>
+
+          <!-- Map Mockup Container -->
+          <div class="col-lg-7">
+            <div class="p-4 bg-white rounded-4 border shadow-sm">
+              <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2 store-map-meta">
+                <div class="fw-bold store-map-address"><i class="bi bi-geo-alt-fill text-primary"></i> VeloPeak Cycles — 742 Velodrome Way</div>
+                <span class="badge bg-success">Open Today Until 7:00 PM</span>
+              </div>
+              <div class="rounded-3 overflow-hidden position-relative bg-dark d-flex align-items-center justify-content-center text-center p-5" style="min-height: 280px; background: linear-gradient(135deg, #202426, #151718);">
+                <div class="text-white">
+                  <div class="brand-logo-icon mx-auto mb-3" style="width:54px;height:54px;font-size:1.5rem;background:#E85D2A;color:#FFF;">
+                    <i class="bi bi-bicycle"></i>
+                  </div>
+                  <h4 class="text-white mb-1">VeloPeak Cycles HQ</h4>
+                  <p class="text-light small mb-3">742 Velodrome Way, Cycle District, CA 94107</p>
+                  <a href="https://maps.google.com" target="_blank" class="btn-custom btn-primary-custom btn-sm-custom">Open in Google Maps <i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. SALES & WORKSHOP INQUIRY FORM ==================== -->
+    <section class="section-padding">
+      <div class="site-container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="booking-form-card">
+              <span class="section-badge mb-2"><i class="bi bi-envelope-fill"></i> Get in Touch</span>
+              <h2 class="booking-form-title">Send a Message to Our Team</h2>
+              <p class="booking-form-subtitle">Have a question about bike sizing, component upgrades, or test rides? We respond within 2 hours.</p>
+
+              <form id="contact-inquiry-form" onsubmit="event.preventDefault(); showToast('Thank you! Your message has been sent to our sales & service team.', 'success'); this.reset();">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="form-group-custom">
+                      <label class="form-label-custom">Your Name <span class="required-star">*</span></label>
+                      <input type="text" class="form-control-custom" placeholder="e.g. Jordan Smith" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group-custom">
+                      <label class="form-label-custom">Your Email <span class="required-star">*</span></label>
+                      <input type="email" class="form-control-custom" placeholder="jordan@example.com" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group-custom">
+                      <label class="form-label-custom">Phone Number</label>
+                      <input type="tel" class="form-control-custom" placeholder="(555) 000-0000">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group-custom">
+                      <label class="form-label-custom">Department / Inquiry Type <span class="required-star">*</span></label>
+                      <select class="form-control-custom form-select-custom" required>
+                        <option value="">Select Department...</option>
+                        <option value="Bicycle Sales & Test Rides">Bicycle Sales & Test Rides</option>
+                        <option value="Repair Workshop & Quotes">Repair Workshop & Quotes</option>
+                        <option value="Laser Bike Fitting Studio">Laser Bike Fitting Studio</option>
+                        <option value="Order Tracking & Shipping">Order Tracking & Shipping</option>
+                        <option value="General Community Rides">General Community Rides</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group-custom mb-4">
+                      <label class="form-label-custom">Your Message <span class="required-star">*</span></label>
+                      <textarea class="form-control-custom" placeholder="How can our bike specialists assist you today?" required></textarea>
+                    </div>
+                  </div>
+                  <div class="col-12 text-end">
+                    <button type="submit" class="btn-custom btn-primary-custom btn-lg-custom w-100">
+                      <i class="bi bi-send-fill"></i> Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. STORE FAQS ==================== -->
+    <section class="section-padding bg-light border-top border-bottom">
+      <div class="site-container">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-patch-question-fill"></i> Store FAQs</span>
+          <h2 class="section-title">Visiting VeloPeak Cycles</h2>
+          <p class="section-subtitle">Helpful guidelines for test riding bikes and workshop drop-offs.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="contactFaqAccordion">
+              <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                <h2 class="accordion-header" id="cFaqOne">
+                  <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCFaqOne" aria-expanded="true">
+                    What do I need to bring for a bicycle test ride?
+                  </button>
+                </h2>
+                <div id="collapseCFaqOne" class="accordion-collapse collapse show" data-bs-parent="#contactFaqAccordion">
+                  <div class="accordion-body text-body">
+                    Please bring a valid photo ID, a credit card, and your helmet (or borrow one of our sanitized test helmets). If you ride clip-in pedals (SPD or Look), feel free to bring your cycling shoes and our mechanics will install your pedals on the test bike.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item mb-3 border rounded-3 overflow-hidden">
+                <h2 class="accordion-header" id="cFaqTwo">
+                  <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCFaqTwo">
+                    Can I leave my bicycle after workshop hours?
+                  </button>
+                </h2>
+                <div id="collapseCFaqTwo" class="accordion-collapse collapse" data-bs-parent="#contactFaqAccordion">
+                  <div class="accordion-body text-body">
+                    Yes. We have a secure 24/7 key-drop locker system on the north side of the building. Simply lock your bike to our monitored drop-off rack, fill out the envelope tag, and drop your key into the slot.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. FINAL CTA BANNER ==================== -->
+    <section class="cta-banner-section">
+      <img src="assets/images/cta/contact-cta.png" alt="VeloPeak Store at Golden Hour" class="cta-banner-bg">
+      <div class="site-container">
+        <div class="cta-banner-content">
+          <span class="badge-custom badge-primary mb-3">Ride Further. Ride Better.</span>
+          <h2 class="cta-banner-title">We Are Here for Every Mile of Your Ride.</h2>
+          <p class="cta-banner-text">
+            Drop into our flagship showroom today or reserve your repair stand in our master workshop online.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="services.html" class="btn-custom btn-primary-custom btn-lg-custom">Book Workshop Service</a>
+            <a href="bikes.html" class="btn-custom btn-dark-outline btn-lg-custom">Shop Bicycles Fleet</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-brand-col">
+          <a class="footer-logo" href="index.html">
+            <div class="brand-logo-icon"><i class="bi bi-bicycle"></i></div>
+            <span class="brand-name">VeloPeak <span>Cycles</span></span>
+          </a>
+          <p class="footer-tagline-text">
+            Performance Bicycles, Technical Gear, Precision Repairs and Community Ride Support. Ride Further. Ride Better.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" fill="#000000"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#ig-grad)"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><svg width="20" height="14" viewBox="0 0 24 17" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 2.205a3.02 3.02 0 0 0-2.122-2.137C19.545 0 12 0 12 0s-7.545 0-9.373.068a3.02 3.02 0 0 0-2.122 2.137C0 3.964 0 8.5 0 8.5s0 4.536.505 6.295a3.02 3.02 0 0 0 2.122 2.137C4.455 17 12 17 12 17s7.545 0 9.373-.068a3.02 3.02 0 0 0 2.122-2.137C24 13.036 24 8.5 24 8.5s0-4.536-.505-6.295zM9.545 12.068V4.932L15.818 8.5l-6.273 3.568z" fill="#FF0000"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#1877F2"/></svg></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Bicycles</h4>
+          <ul class="footer-nav-list">
+            <li><a href="bikes.html?type=road" class="footer-nav-link">Road Bikes</a></li>
+            <li><a href="bikes.html?type=mountain" class="footer-nav-link">Mountain Bikes</a></li>
+            <li><a href="bikes.html?type=hybrid" class="footer-nav-link">Hybrid Bikes</a></li>
+            <li><a href="bikes.html?type=electric" class="footer-nav-link">Electric Bikes</a></li>
+            <li><a href="bikes.html?type=kids" class="footer-nav-link">Kids & Youth</a></li>
+            <li><a href="bike-details.html" class="footer-nav-link">Apex R1 Flagship</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Gear & Service</h4>
+          <ul class="footer-nav-list">
+            <li><a href="accessories.html" class="footer-nav-link">Helmets & MIPS</a></li>
+            <li><a href="accessories.html" class="footer-nav-link">Smart Illumination</a></li>
+            <li><a href="accessories.html" class="footer-nav-link">Heavy-Duty Locks</a></li>
+            <li><a href="services.html" class="footer-nav-link">Tune-Up Packages</a></li>
+            <li><a href="services.html#individual-repairs" class="footer-nav-link">Wheel & Brake Repair</a></li>
+            <li><a href="services.html#booking-section" class="footer-nav-link">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Store & Workshop</h4>
+          <ul class="footer-contact-list mb-3">
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>742 Velodrome Way, Cycle District, CA 94107</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>Sales & Showroom: (555) 835-6732</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <span>Mon–Sat: 9:00 AM – 7:00 PM | Sun: 10:00 AM – 5:00 PM</span>
+            </li>
+          </ul>
+          <form class="footer-newsletter-form">
+            <input type="email" class="footer-newsletter-input" placeholder="Join Ride Notes Newsletter" required>
+            <button type="submit" class="btn-custom btn-primary-custom btn-sm-custom">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VeloPeak Cycles. All rights reserved. Ride Further. Ride Better.</div>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Workshop</a>
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

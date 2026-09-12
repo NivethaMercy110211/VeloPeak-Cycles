@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeloPeak Cycles | Cycling Lifestyle & Guided Bike Finder</title>
+  <meta name="description"
+    content="Choose, Equip, Ride, and Maintain with VeloPeak Cycles. Guided interactive bike finder, riding style guide, and community rides.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+  <!-- Bootstrap 5 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Modular CSS Architecture -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/bikes.css">
+  <link rel="stylesheet" href="css/accessories.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="site-container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html" id="brand-logo-link">
+          <div class="brand-logo-icon">
+            <i class="bi bi-bicycle"></i>
+          </div>
+          <div class="brand-text-group">
+            <span class="brand-name">VeloPeak <span>Cycles</span></span>
+            <span class="brand-tagline">Ride Further. Ride Better.</span>
+          </div>
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarMain">
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-1">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="home-2.html">Home 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bikes.html">Bikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="accessories.html">Accessories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Repair Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="brands.html">Brands</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header-actions">
+          <a href="login.html" class="btn-custom btn-secondary-custom btn-sm-custom d-none d-sm-inline-flex">
+            <i class="bi bi-person"></i> Login
+          </a>
+
+          <a href="bikes.html" class="header-action-btn" title="View Cart">
+            <i class="bi bi-bag"></i>
+            <span class="badge-pill cart-count-badge">2</span>
+          </a>
+
+          <button type="button" class="header-action-btn theme-toggle-btn" title="Toggle Dark/Light Mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <button type="button" class="header-action-btn rtl-toggle-btn" title="Toggle RTL/LTR">
+            <span>RTL</span>
+          </button>
+
+          <button class="navbar-toggler header-action-btn d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenuOffcanvas">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-logo-icon" style="width:36px;height:36px;font-size:1.1rem;"><i class="bi bi-bicycle"></i>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-name fs-5">VeloPeak <span>Cycles</span></span>
+          <span class="brand-tagline">Ride Further. Ride Better.</span>
+        </div>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column mb-4">
+        <a class="offcanvas-nav-link" href="index.html">Home 1 <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link active" href="home-2.html">Home 2 <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="about.html">About <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="bikes.html">Bikes <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="accessories.html">Accessories <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="services.html">Repair Services <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="brands.html">Brands <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="contact.html">Contact <i class="bi bi-chevron-right"></i></a>
+      </div>
+      <div class="mt-auto pt-3 border-top header-actions-drawer">
+        <a href="login.html" class="btn-custom btn-secondary-custom btn-sm-custom">
+          <i class="bi bi-person"></i> Login
+        </a>
+        <a href="bikes.html" class="header-action-btn" title="View Cart">
+          <i class="bi bi-bag"></i>
+          <span class="badge-pill cart-count-badge">2</span>
+        </a>
+        <button type="button" class="header-action-btn theme-toggle-btn" title="Toggle Dark/Light Mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button type="button" class="header-action-btn rtl-toggle-btn" title="Toggle RTL/LTR">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== HERO SECTION (LIFESTYLE FOCUS) ==================== -->
+    <section class="hero-section home-split-hero home-split-hero-reverse border-bottom">
+      <img src="assets/images/hero/home2-banner.png" alt="VeloPeak Complete Rider Journey" class="hero-banner-bg">
+      <div class="site-container">
+        <div class="row align-items-center justify-content-end">
+          <div class="col-lg-7 col-xl-6 ms-auto hero-content hero-content-card me-lg-2">
+            <div class="hero-tag">
+              <i class="bi bi-compass"></i> The Complete Rider Journey
+            </div>
+            <h1 class="hero-title">
+              Everything Your <span>Ride Needs.</span>
+            </h1>
+            <p class="hero-subtitle">
+              Choose the right machine for your terrain, equip with technical protection, ride further with tailored
+              fits, and keep your components dialed with master workshop service.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+              <a href="#bike-finder-section" class="btn-custom btn-primary-custom btn-lg-custom">
+                <i class="bi bi-sliders"></i> Find Your Bike
+              </a>
+              <a href="services.html" class="btn-custom btn-secondary-custom btn-lg-custom">
+                <i class="bi bi-wrench"></i> Book a Service
+              </a>
+            </div>
+
+            <!-- Journey Step Pills -->
+            <div class="d-flex flex-wrap gap-2 pt-2 journey-steps-grid">
+              <span class="badge bg-light text-dark border p-2 px-3 fw-bold"><span class="text-primary me-1">1.</span>
+                Choose</span>
+              <span class="badge bg-light text-dark border p-2 px-3 fw-bold"><span class="text-primary me-1">2.</span>
+                Equip</span>
+              <span class="badge bg-light text-dark border p-2 px-3 fw-bold"><span class="text-primary me-1">3.</span>
+                Ride</span>
+              <span class="badge bg-light text-dark border p-2 px-3 fw-bold"><span class="text-primary me-1">4.</span>
+                Maintain</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1. FIND YOUR RIDING STYLE ==================== -->
+    <section class="section-padding">
+      <div class="site-container">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-bicycle"></i> Personal Alignment</span>
+          <h2 class="section-title">Find Your Riding Style</h2>
+          <p class="section-subtitle">Different paths demand different geometry, gearing, and tire profiles.</p>
+        </div>
+
+        <div class="row g-4 riding-style-grid">
+          <!-- Style 1 — Endurance Road -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card" style="padding:0; overflow:hidden;">
+              <img src="assets/images/pages/endurance_road.png" alt="Endurance Road cycling"
+                style="width:100%; height:auto; display:block; transition:transform 0.45s ease;"
+                onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+              <div style="padding:var(--space-32);">
+                <div class="feature-icon-wrapper"><i class="bi bi-speedometer2"></i></div>
+                <h4 class="feature-title">Endurance Road</h4>
+                <p class="feature-desc mb-3">Designed for speed on pavement, climbing gradients, and long hours in the
+                  saddle with aerodynamic efficiency.</p>
+                <a href="bikes.html?type=road" class="mt-auto text-primary fw-bold">Explore Road Lineup <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Style 2 — Technical Trail -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card" style="padding:0; overflow:hidden;">
+              <img src="assets/images/pages/technical_trail.png" alt="Technical Trail mountain biking"
+                style="width:100%; height:auto; display:block; transition:transform 0.45s ease;"
+                onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+              <div style="padding:var(--space-32);">
+                <div class="feature-icon-wrapper"><i class="bi bi-tree"></i></div>
+                <h4 class="feature-title">Technical Trail</h4>
+                <p class="feature-desc mb-3">Long-travel air suspension, dropper posts, and tubeless grip for mastering
+                  singletracks and rugged descents.</p>
+                <a href="bikes.html?type=mountain" class="mt-auto text-primary fw-bold">Explore Trail Lineup <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Style 3 — Urban Commuter -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card" style="padding:0; overflow:hidden;">
+              <img src="assets/images/pages/urban_commuter.png" alt="Urban Commuter city cycling"
+                style="width:100%; height:auto; display:block; transition:transform 0.45s ease;"
+                onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+              <div style="padding:var(--space-32);">
+                <div class="feature-icon-wrapper"><i class="bi bi-buildings"></i></div>
+                <h4 class="feature-title">Urban Commuter</h4>
+                <p class="feature-desc mb-3">Upright visibility, integrated fenders, pannier rack mounts, and electric
+                  pedal assist for hassle-free daily transit.</p>
+                <a href="bikes.html?type=electric" class="mt-auto text-primary fw-bold">Explore Commuter Lineup <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Style 4 — Gravel Explorer -->
+          <div class="col-lg-3 col-md-6">
+            <div class="feature-card" style="padding:0; overflow:hidden;">
+              <img src="assets/images/pages/gravel_explorer.png" alt="Gravel Explorer mixed terrain riding"
+                style="width:100%; height:auto; display:block; transition:transform 0.45s ease;"
+                onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+              <div style="padding:var(--space-32);">
+                <div class="feature-icon-wrapper"><i class="bi bi-signpost-split"></i></div>
+                <h4 class="feature-title">Gravel Explorer</h4>
+                <p class="feature-desc mb-3">Wider 45mm tire clearance and endurance drop bars for transitioning
+                  seamlessly from asphalt to forest fire roads.</p>
+                <a href="bikes.html?type=hybrid" class="mt-auto text-primary fw-bold">Explore Gravel Lineup <i
+                    class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. INTERACTIVE BIKE FINDER (GUIDED SELECTION) ==================== -->
+    <section class="section-padding border-top border-bottom" id="bike-finder-section"
+      style="position:relative; overflow:hidden; background-image:url('assets/images/pages/interactive1.png'); background-size:cover; background-position:center; background-attachment:fixed;">
+      <!-- Dark overlay for contrast -->
+      <div class="bike-finder-overlay"></div>
+      <div class="site-container" style="position:relative; z-index:1;">
+        <div class="section-header text-center">
+          <span class="section-badge" style="background:rgba(255,255,255,0.12); color:#fff; border-color:rgba(255,255,255,0.25);"><i class="bi bi-cpu-fill"></i> Interactive Quiz</span>
+          <h2 class="section-title" style="color:#ffffff;">Interactive Bike Finder</h2>
+          <p class="section-subtitle" style="color:rgba(255,255,255,0.75);">Answer 3 questions to identify the ideal bicycle category for your riding goals.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="bg-white rounded-4 border p-4 p-md-5 shadow-sm" id="bike-finder-container">
+
+              <!-- Progress Step Dots -->
+              <div class="d-flex justify-content-center gap-3 mb-4 finder-progress-steps">
+                <span class="finder-step-dot active badge bg-primary text-white p-2 px-3">1. Terrain</span>
+                <span class="finder-step-dot badge bg-secondary text-white p-2 px-3">2. Priority</span>
+                <span class="finder-step-dot badge bg-secondary text-white p-2 px-3">3. Experience</span>
+              </div>
+
+              <form id="bike-finder-form">
+                <!-- Step 1: Where will you ride most? -->
+                <div class="finder-step" id="step-1">
+                  <h4 class="text-center mb-4">Where will you ride most?</h4>
+                  <div class="row g-3 finder-options-grid mb-4">
+                    <div class="col-md-4 col-6">
+                      <button type="button"
+                        class="btn btn-outline-secondary w-100 p-3 finder-option-btn active text-start"
+                        data-field="terrain" data-value="roads">
+                        <i class="bi bi-signpost fs-4 text-primary d-block mb-2"></i>
+                        <strong>Paved Roads</strong>
+                        <div class="small text-muted">Smooth tarmac & highway shoulders</div>
+                      </button>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="terrain" data-value="trails">
+                        <i class="bi bi-tree fs-4 text-primary d-block mb-2"></i>
+                        <strong>Off-Road Trails</strong>
+                        <div class="small text-muted">Dirt singletracks, rocks & roots</div>
+                      </button>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="terrain" data-value="city">
+                        <i class="bi bi-buildings fs-4 text-primary d-block mb-2"></i>
+                        <strong>City & Commute</strong>
+                        <div class="small text-muted">Bike lanes & urban streets</div>
+                      </button>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="terrain" data-value="mixed">
+                        <i class="bi bi-signpost-split fs-4 text-primary d-block mb-2"></i>
+                        <strong>Mixed Terrain</strong>
+                        <div class="small text-muted">Gravel, canal paths & paved roads</div>
+                      </button>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="terrain" data-value="family">
+                        <i class="bi bi-people fs-4 text-primary d-block mb-2"></i>
+                        <strong>Family / Recreation</strong>
+                        <div class="small text-muted">Parks, neighborhood paths & kids</div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end finder-step-actions">
+                    <button type="button" class="btn-custom btn-primary-custom finder-next-btn">Next Step: Priority <i
+                        class="bi bi-arrow-right"></i></button>
+                  </div>
+                </div>
+
+                <!-- Step 2: What's your riding priority? -->
+                <div class="finder-step d-none" id="step-2">
+                  <h4 class="text-center mb-4">What's your main riding priority?</h4>
+                  <div class="row g-3 finder-options-grid mb-4">
+                    <div class="col-md-4 col-6">
+                      <button type="button"
+                        class="btn btn-outline-secondary w-100 p-3 finder-option-btn active text-start"
+                        data-field="priority" data-value="speed">
+                        <i class="bi bi-lightning-charge fs-4 text-primary d-block mb-2"></i>
+                        <strong>Speed & Aerodynamics</strong>
+                        <div class="small text-muted">Lightweight performance</div>
+                      </button>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="priority" data-value="comfort">
+                        <i class="bi bi-shield-check fs-4 text-primary d-block mb-2"></i>
+                        <strong>Upright Comfort</strong>
+                        <div class="small text-muted">Relaxed reach and cushioned saddle</div>
+                      </button>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="priority" data-value="versatility">
+                        <i class="bi bi-infinity fs-4 text-primary d-block mb-2"></i>
+                        <strong>All-Round Versatility</strong>
+                        <div class="small text-muted">Ready for any road or weather</div>
+                      </button>
+                    </div>
+                    <div class="col-md-6 col-6">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="priority" data-value="offroad">
+                        <i class="bi bi-cone-striped fs-4 text-primary d-block mb-2"></i>
+                        <strong>Off-Road Capability</strong>
+                        <div class="small text-muted">Tough suspension & heavy traction</div>
+                      </button>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="priority" data-value="electric">
+                        <i class="bi bi-battery-charging fs-4 text-primary d-block mb-2"></i>
+                        <strong>Electric Assistance</strong>
+                        <div class="small text-muted">Effortless hill climbing & speed</div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between finder-step-actions">
+                    <button type="button" class="btn-custom btn-secondary-custom finder-prev-btn"><i
+                        class="bi bi-arrow-left"></i> Previous</button>
+                    <button type="button" class="btn-custom btn-primary-custom finder-next-btn">Next Step: Experience <i
+                        class="bi bi-arrow-right"></i></button>
+                  </div>
+                </div>
+
+                <!-- Step 3: Experience Level -->
+                <div class="finder-step d-none" id="step-3">
+                  <h4 class="text-center mb-4">What is your experience level?</h4>
+                  <div class="row g-3 finder-options-grid mb-4">
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="experience" data-value="beginner">
+                        <i class="bi bi-emoji-smile fs-4 text-primary d-block mb-2"></i>
+                        <strong>Beginner</strong>
+                        <div class="small text-muted">New to cycling or getting back in</div>
+                      </button>
+                    </div>
+                    <div class="col-md-4">
+                      <button type="button"
+                        class="btn btn-outline-secondary w-100 p-3 finder-option-btn active text-start"
+                        data-field="experience" data-value="intermediate">
+                        <i class="bi bi-award fs-4 text-primary d-block mb-2"></i>
+                        <strong>Intermediate</strong>
+                        <div class="small text-muted">Rides weekly, looking to upgrade</div>
+                      </button>
+                    </div>
+                    <div class="col-md-4">
+                      <button type="button" class="btn btn-outline-secondary w-100 p-3 finder-option-btn text-start"
+                        data-field="experience" data-value="experienced">
+                        <i class="bi bi-trophy fs-4 text-primary d-block mb-2"></i>
+                        <strong>Experienced Racer</strong>
+                        <div class="small text-muted">Dedicated century & race rider</div>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between finder-step-actions">
+                    <button type="button" class="btn-custom btn-secondary-custom finder-prev-btn"><i
+                        class="bi bi-arrow-left"></i> Previous</button>
+                    <button type="button" class="btn-custom btn-primary-custom finder-next-btn"
+                      id="finder-submit-btn">Find My Bike <i class="bi bi-check-circle"></i></button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Dynamic Result Card -->
+              <div id="bike-finder-result" class="d-none mt-4 p-4 bg-light rounded-4 border">
+                <!-- Populated via js/bike-finder.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. GEAR UP FOR THE RIDE ==================== -->
+    <section class="section-padding">
+      <div class="site-container">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-shield-check"></i> Curated Bundles</span>
+          <h2 class="section-title">Gear Up for Every Ride</h2>
+          <p class="section-subtitle">Complete essential gear setups matched to your riding scenario.</p>
+        </div>
+
+        <div class="row g-4 curated-bundles-grid">
+          <!-- Kit 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card" style="padding:0; overflow:hidden;">
+              <img src="assets/images/pages/bundle-1.png" alt="Daily Commuter Kit"
+                style="width:100%; height:auto; display:block; transition:transform 0.45s ease;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              <div style="padding:var(--space-32);">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="badge bg-primary text-white">Daily Commuter Kit</span>
+                  <span class="fw-bold text-primary">$189 Set</span>
+                </div>
+                <h4 class="mb-3">The Urban Rush Setup</h4>
+                <p class="text-muted small mb-4">VeloBeam 1200 smart headlight, TitanLock heavy-duty 14mm U-lock, and
+                  weatherproof reflective commuter jacket.</p>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
+                  <li><i class="bi bi-check2 text-primary me-2"></i> 1200 Lumen USB-C Front Light</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> Hardened Steel U-Lock with Bracket</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> Hi-Vis Waterproof Windbreaker</li>
+                </ul>
+                <button class="btn-custom btn-secondary-custom w-100 mt-auto add-to-cart-btn"
+                  data-name="Urban Rush Setup">Add Kit to Bag</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kit 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card" style="padding:0; overflow:hidden;">
+              <img src="assets/images/pages/bundle-2.png" alt="Weekend Century Kit"
+                style="width:100%; height:auto; display:block; transition:transform 0.45s ease;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              <div style="padding:var(--space-32);">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="badge bg-primary text-white">Weekend Century Kit</span>
+                  <span class="fw-bold text-primary">$245 Set</span>
+                </div>
+                <h4 class="mb-3">The 100km Road Explorer</h4>
+                <p class="text-muted small mb-4">AeroShield MIPS road helmet, ProPeloton thermal jersey, and compact
+                  under-saddle repair wedge.</p>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
+                  <li><i class="bi bi-check2 text-primary me-2"></i> AeroShield 22-Vent MIPS Helmet</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> 3-Pocket Aerodynamic Race Jersey</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> CO2 Inflator &amp; Hex Tool Wedge</li>
+                </ul>
+                <button class="btn-custom btn-secondary-custom w-100 mt-auto add-to-cart-btn"
+                  data-name="100km Road Explorer Kit">Add Kit to Bag</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kit 3 -->
+          <div class="col-lg-4 col-md-12">
+            <div class="feature-card" style="padding:0; overflow:hidden;">
+              <img src="assets/images/pages/bundle-3.png" alt="Singletrack Trail Kit"
+                style="width:100%; height:auto; display:block; transition:transform 0.45s ease;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              <div style="padding:var(--space-32);">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <span class="badge bg-primary text-white">Singletrack Trail Kit</span>
+                  <span class="fw-bold text-primary">$210 Set</span>
+                </div>
+                <h4 class="mb-3">The Alpine Trail Armor</h4>
+                <p class="text-muted small mb-4">TrailGuard deep-coverage MTB helmet, GelVent shock-dampening gloves, and
+                  floor track pump.</p>
+                <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
+                  <li><i class="bi bi-check2 text-primary me-2"></i> Extended Rear Visor Trail Helmet</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> Gel-Padded Anti-Vibe Riding Gloves</li>
+                  <li><i class="bi bi-check2 text-primary me-2"></i> High-Volume Tubeless Track Pump</li>
+                </ul>
+                <button class="btn-custom btn-secondary-custom w-100 mt-auto add-to-cart-btn"
+                  data-name="Alpine Trail Armor Kit">Add Kit to Bag</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. ROAD VS MOUNTAIN VS HYBRID (DIRECT COMPARISON) ==================== -->
+    <section class="section-padding comparison-section position-relative overflow-hidden" id="direct-comparison-section">
+      <div class="comparison-bg-wrapper">
+        <img src="assets/images/pages/interactive_bike_finder.png" alt="VeloPeak Direct Comparison & Bike Finder" class="comparison-bg-img">
+        <div class="comparison-overlay"></div>
+      </div>
+      <div class="site-container position-relative" style="z-index: 2;">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-sliders2"></i> Direct Comparison</span>
+          <h2 class="section-title">Road vs Mountain vs Hybrid</h2>
+          <p class="section-subtitle">Understanding key specifications before selecting your frame.</p>
+        </div>
+
+        <div class="table-responsive comparison-table-card rounded-4 border shadow-lg p-2 p-md-4 bike-comparison-scroll"
+          role="region" aria-label="Scrollable bicycle comparison table" tabindex="0">
+          <table class="table table-dark table-hover align-middle mb-0 bike-comparison-table">
+            <thead>
+              <tr>
+                <th class="py-3 px-3">Specification</th>
+                <th class="py-3 px-3 text-primary"><i class="bi bi-speedometer2"></i> Road Bikes</th>
+                <th class="py-3 px-3"><i class="bi bi-tree"></i> Mountain Bikes</th>
+                <th class="py-3 px-3"><i class="bi bi-signpost-2"></i> Hybrid Bikes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold px-3">Primary Terrain</td>
+                <td class="px-3">Paved Roads & Tarmac</td>
+                <td class="px-3">Rocks, Roots & Singletracks</td>
+                <td class="px-3">City, Canal Paths & Mixed</td>
+              </tr>
+              <tr>
+                <td class="fw-bold px-3">Riding Posture</td>
+                <td class="px-3">Aerodynamic & Forward Drop</td>
+                <td class="px-3">Upright & Dynamic Trail</td>
+                <td class="px-3">Comfortable & Upright</td>
+              </tr>
+              <tr>
+                <td class="fw-bold px-3">Tire Width</td>
+                <td class="px-3">25mm – 30mm Smooth</td>
+                <td class="px-3">2.2" – 2.6" Knobby Tread</td>
+                <td class="px-3">35mm – 40mm All-Road</td>
+              </tr>
+              <tr>
+                <td class="fw-bold px-3">Suspension</td>
+                <td class="px-3">Rigid Carbon Fork</td>
+                <td class="px-3">120mm–160mm Air Fork</td>
+                <td class="px-3">Rigid Alloy or Short Travel</td>
+              </tr>
+              <tr>
+                <td class="fw-bold px-3">Weight Range</td>
+                <td class="px-3">7.5kg – 9.2kg</td>
+                <td class="px-3">12.5kg – 15.5kg</td>
+                <td class="px-3">10.5kg – 13.0kg</td>
+              </tr>
+              <tr>
+                <td class="fw-bold px-3">Popular Model</td>
+                <td class="px-3"><a href="bike-details.html" class="fw-bold text-primary">Apex R1 Road</a></td>
+                <td class="px-3"><a href="bikes.html" class="fw-bold text-white">Summit X7 Trail</a></td>
+                <td class="px-3"><a href="bikes.html" class="fw-bold text-white">MetroFlow Hybrid</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. WORKSHOP & MAINTENANCE HUB ==================== -->
+    <section class="section-padding">
+      <div class="site-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-badge"><i class="bi bi-wrench-adjustable"></i> Pre-Ride Routine</span>
+            <h2 class="section-title">The Essential ABC Pre-Ride Check</h2>
+            <p class="text-body mb-4">
+              Taking 60 seconds before heading out extends component life and ensures safety on fast descents.
+            </p>
+            <div class="d-flex flex-column gap-3">
+              <div class="p-3 bg-light rounded-3 border">
+                <h5 class="mb-1 text-primary"><i class="bi bi-arrow-up-circle me-2"></i> A is for Air</h5>
+                <p class="small text-muted mb-0">Check PSI ratings on your tire sidewall. Road tires require 70-90 PSI;
+                  mountain tubeless 22-28 PSI.</p>
+              </div>
+              <div class="p-3 bg-light rounded-3 border">
+                <h5 class="mb-1 text-primary"><i class="bi bi-disc me-2"></i> B is for Brakes</h5>
+                <p class="small text-muted mb-0">Squeeze both levers. Ensure at least one finger width between lever and
+                  bar at full bite point.</p>
+              </div>
+              <div class="p-3 bg-light rounded-3 border">
+                <h5 class="mb-1 text-primary"><i class="bi bi-gear-wide-connected me-2"></i> C is for Chain & Cassette
+                </h5>
+                <p class="small text-muted mb-0">Spin cranks backward. Inspect for dry links, dirt buildup, and apply
+                  wet/dry ceramic lube.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="rounded-4 shadow-lg overflow-hidden" style="position:relative; background-image:url('assets/images/pages/workshop_diagnostic.png'); background-size:cover; background-position:center;">
+              <!-- Dark overlay -->
+              <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(10,14,30,0.88) 0%, rgba(20,28,60,0.80) 100%); border-radius:inherit;"></div>
+              <!-- Content -->
+              <div class="p-4 p-md-5 text-white" style="position:relative; z-index:1;">
+                <span class="badge bg-primary mb-3">Workshop Diagnostic</span>
+                <h3 class="text-white mb-3">Is Your Drivetrain Clicking or Hesitating?</h3>
+                <p class="text-light mb-4">
+                  Bring your bicycle to our master workshop for a complimentary 5-minute gear alignment check and chain
+                  wear micrometer reading.
+                </p>
+                <div class="d-flex flex-column gap-2 mb-4">
+                  <div class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i>
+                    Certified Park Tool Master Mechanics</div>
+                  <div class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i>
+                    Genuine Shimano &amp; SRAM Replacement Parts</div>
+                  <div class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i>
+                    Same-Day Turnaround on Tune-Ups</div>
+                </div>
+                <a href="services.html" class="btn-custom btn-primary-custom w-100">Schedule Service Check-In</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. WEEKEND RIDE ESSENTIALS ==================== -->
+    <section class="section-padding bg-light border-top border-bottom">
+      <div class="site-container">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-bag-check"></i> Gear Checklist</span>
+          <h2 class="section-title">Weekend Ride Essentials</h2>
+          <p class="section-subtitle">Pack smart for your next century ride or gravel expedition.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Item 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/pages/gear_checklist-1.png" alt="TrailGuard MTB Helmet"
+                  class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Protection</span>
+                <h4 class="accessory-card-title"><a href="accessory-details.html">TrailGuard MIPS Helmet</a></h4>
+                <p class="small text-muted mb-3">Deep temporal coverage and adjustable breakaway visor.</p>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$160</div>
+                  <button class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn"
+                    data-name="TrailGuard MIPS Helmet">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/pages/gear_checklist-2.png" alt="AeroWedge Saddle Bag"
+                  class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Storage</span>
+                <h4 class="accessory-card-title"><a href="accessory-details.html">AeroWedge Saddle Bag</a></h4>
+                <p class="small text-muted mb-3">Waterproof TPU construction with reflective light clip.</p>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$38</div>
+                  <button class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn"
+                    data-name="AeroWedge Saddle Bag">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/pages/gear_checklist-3.png" alt="Master Hex Multi-Tool"
+                  class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Maintenance</span>
+                <h4 class="accessory-card-title"><a href="accessory-details.html">16-in-1 Hex Multi-Tool</a></h4>
+                <p class="small text-muted mb-3">Hardened vanadium steel with integrated chain breaker.</p>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$42</div>
+                  <button class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn"
+                    data-name="16-in-1 Hex Multi-Tool">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/pages/gear_checklist-4.png" alt="VeloNav GPS Computer"
+                  class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Electronics</span>
+                <h4 class="accessory-card-title"><a href="accessory-details.html">VeloNav GPS Computer</a></h4>
+                <p class="small text-muted mb-3">Turn-by-turn routing with 28-hour battery endurance.</p>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$289</div>
+                  <button class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn"
+                    data-name="VeloNav GPS Computer">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. CYCLING COMMUNITY ==================== -->
+    <section class="section-padding">
+      <div class="site-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <img src="assets/images/pages/velopeak_ride_club.png" alt="VeloPeak Cycling Club"
+              class="img-fluid rounded-4 shadow-sm w-100">
+          </div>
+          <div class="col-lg-6">
+            <span class="section-badge"><i class="bi bi-people-fill"></i> VeloPeak Ride Club</span>
+            <h2 class="section-title">Join Our Weekly Group Rides</h2>
+            <p class="text-body mb-4">
+              Cycling is better together. We host no-drop Saturday morning coffee rides, Wednesday evening road
+              pace-lines, and monthly trail clinics for riders of all abilities.
+            </p>
+
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex align-items-start gap-3">
+                <div class="feature-icon-wrapper mb-0" style="width:40px;height:40px;font-size:1.1rem;"><i
+                    class="bi bi-cup-hot"></i></div>
+                <div>
+                  <strong>Saturday Morning Coffee Roll (35km):</strong>
+                  <div class="text-muted small">Leaves showroom 7:30 AM · Moderate 24km/h pace · Free espresso upon
+                    return.</div>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3">
+                <div class="feature-icon-wrapper mb-0" style="width:40px;height:40px;font-size:1.1rem;"><i
+                    class="bi bi-lightning-charge"></i></div>
+                <div>
+                  <strong>Wednesday Sunset Paceline (50km):</strong>
+                  <div class="text-muted small">Leaves showroom 6:00 PM · Brisk 32km/h training ride for experienced
+                    roadies.</div>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-custom btn-secondary-custom">Join Our Strava Club & Chat <i
+                class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. FEATURED COLLECTIONS ==================== -->
+    <section class="section-padding bg-light border-top border-bottom">
+      <div class="site-container">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-stars"></i> Limited Series</span>
+          <h2 class="section-title">Featured High-Performance Builds</h2>
+          <p class="section-subtitle">Handpicked flagship builds ready for immediate delivery or showroom collection.
+          </p>
+        </div>
+
+        <div class="row g-4 featured-builds-grid">
+          <!-- Build 1 -->
+          <div class="col-lg-6">
+            <div class="card border rounded-4 overflow-hidden shadow-sm h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5 bg-secondary">
+                  <img src="assets/images/bikes/road-aero-pro.jpg" alt="AeroStorm Pro" class="img-fluid h-100 w-100"
+                    style="object-fit:contain; object-position:center; min-height:220px; padding:12px; background:var(--bg-secondary);">
+                </div>
+                <div class="col-md-7 p-4 d-flex flex-column">
+                  <span class="badge bg-primary text-white w-auto align-self-start mb-2">Race Series</span>
+                  <h4>AeroStorm Pro Carbon</h4>
+                  <p class="text-muted small mb-3">Shimano Ultegra Di2 Electronic 12-Speed with 50mm carbon deep section
+                    wheels. Weighs only 7.8kg.</p>
+                  <div class="mt-auto d-flex align-items-center justify-content-between">
+                    <span class="fs-4 fw-bold text-primary">$4,499</span>
+                    <a href="bike-details.html" class="btn-custom btn-primary-custom btn-sm-custom">View Spec Sheet</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Build 2 -->
+          <div class="col-lg-6">
+            <div class="card border rounded-4 overflow-hidden shadow-sm h-100">
+              <div class="row g-0 h-100">
+                <div class="col-md-5 bg-secondary">
+                  <img src="assets/images/pages/enduro_9_factory.png" alt="Enduro 9 Factory" class="img-fluid h-100 w-100"
+                    style="object-fit:contain; object-position:center; min-height:220px; padding:12px; background:var(--bg-secondary);">
+                </div>
+                <div class="col-md-7 p-4 d-flex flex-column">
+                  <span class="badge bg-secondary text-white w-auto align-self-start mb-2">Trail Flagship</span>
+                  <h4>Enduro 9 Factory</h4>
+                  <p class="text-muted small mb-3">Fox Factory 36 Kashima coat 160mm suspension, SRAM X01 AXS wireless
+                    transmission, 29" tubeless carbon rims.</p>
+                  <div class="mt-auto d-flex align-items-center justify-content-between">
+                    <span class="fs-4 fw-bold text-primary">$5,250</span>
+                    <a href="bike-details.html" class="btn-custom btn-primary-custom btn-sm-custom">View Spec Sheet</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 9. FINAL CTA BANNER ==================== -->
+    <section class="cta-banner-section">
+      <img src="assets/images/cta/home2-cta.png" alt="Rider equipment prepared for adventure" class="cta-banner-bg">
+      <div class="site-container">
+        <div class="cta-banner-content">
+          <span class="badge-custom badge-primary mb-3">Ride Further. Ride Better.</span>
+          <h2 class="cta-banner-title">Ready to Upgrade Your Riding Journey?</h2>
+          <p class="cta-banner-text">
+            Drop into our flagship fitting studio for custom saddle and cleat alignment, or browse our complete bicycle
+            collection online.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="bikes.html" class="btn-custom btn-primary-custom btn-lg-custom">Shop All Bicycles</a>
+            <a href="services.html" class="btn-custom btn-dark-outline btn-lg-custom">Book Workshop Service</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-brand-col">
+          <a class="footer-logo" href="index.html">
+            <div class="brand-logo-icon"><i class="bi bi-bicycle"></i></div>
+            <div class="brand-text-group">
+              <span class="brand-name">VeloPeak <span>Cycles</span></span>
+              <span class="brand-tagline">Ride Further. Ride Better.</span>
+            </div>
+          </a>
+          <p class="footer-tagline-text">
+            Performance Bicycles, Technical Gear, Precision Repairs and Community Ride Support. Ride Further. Ride
+            Better.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X"><svg width="18" height="18"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"
+                  fill="#000000" />
+              </svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="ig-grad" cx="30%" cy="107%" r="150%">
+                    <stop offset="0%" stop-color="#fdf497" />
+                    <stop offset="5%" stop-color="#fdf497" />
+                    <stop offset="45%" stop-color="#fd5949" />
+                    <stop offset="60%" stop-color="#d6249f" />
+                    <stop offset="90%" stop-color="#285AEB" />
+                  </radialGradient>
+                </defs>
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  fill="url(#ig-grad)" />
+              </svg></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><svg width="20" height="14" viewBox="0 0 24 17"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.495 2.205a3.02 3.02 0 0 0-2.122-2.137C19.545 0 12 0 12 0s-7.545 0-9.373.068a3.02 3.02 0 0 0-2.122 2.137C0 3.964 0 8.5 0 8.5s0 4.536.505 6.295a3.02 3.02 0 0 0 2.122 2.137C4.455 17 12 17 12 17s7.545 0 9.373-.068a3.02 3.02 0 0 0 2.122-2.137C24 13.036 24 8.5 24 8.5s0-4.536-.505-6.295zM9.545 12.068V4.932L15.818 8.5l-6.273 3.568z"
+                  fill="#FF0000" />
+              </svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  fill="#1877F2" />
+              </svg></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Bicycles</h4>
+          <ul class="footer-nav-list">
+            <li><a href="bikes.html?type=road" class="footer-nav-link">Road Bikes</a></li>
+            <li><a href="bikes.html?type=mountain" class="footer-nav-link">Mountain Bikes</a></li>
+            <li><a href="bikes.html?type=hybrid" class="footer-nav-link">Hybrid Bikes</a></li>
+            <li><a href="bikes.html?type=electric" class="footer-nav-link">Electric Bikes</a></li>
+            <li><a href="bikes.html?type=kids" class="footer-nav-link">Kids & Youth</a></li>
+            <li><a href="bike-details.html" class="footer-nav-link">Apex R1 Flagship</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Gear & Service</h4>
+          <ul class="footer-nav-list">
+            <li><a href="accessories.html" class="footer-nav-link">Helmets & MIPS</a></li>
+            <li><a href="accessories.html" class="footer-nav-link">Smart Illumination</a></li>
+            <li><a href="accessories.html" class="footer-nav-link">Heavy-Duty Locks</a></li>
+            <li><a href="services.html" class="footer-nav-link">Tune-Up Packages</a></li>
+            <li><a href="services.html#individual-repairs" class="footer-nav-link">Wheel & Brake Repair</a></li>
+            <li><a href="services.html#booking-section" class="footer-nav-link">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Store & Workshop</h4>
+          <ul class="footer-contact-list mb-3">
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>742 Velodrome Way, Cycle District, CA 94107</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>Sales & Showroom: (555) 835-6732</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <span>Mon–Sat: 9:00 AM – 7:00 PM | Sun: 10:00 AM – 5:00 PM</span>
+            </li>
+          </ul>
+          <form class="footer-newsletter-form">
+            <input type="email" class="footer-newsletter-input" placeholder="Join Ride Notes Newsletter" required>
+            <button type="submit" class="btn-custom btn-primary-custom btn-sm-custom">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VeloPeak Cycles. All rights reserved. Ride Further. Ride Better.</div>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Workshop</a>
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle & Custom Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/bike-finder.js"></script>
+</body>
+
+</html>

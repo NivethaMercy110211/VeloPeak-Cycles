@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Button System - VeloPeak Cycles
+   Consistent, performance-driven interactive buttons
+   ========================================================================== */
+
+.btn-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-custom:disabled,
+.btn-custom.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Primary Button */
+.btn-primary-custom {
+  background-color: var(--color-primary);
+  color: #FFFFFF !important;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(232, 93, 42, 0.25);
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 93, 42, 0.35);
+}
+
+.btn-primary-custom:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button */
+.btn-secondary-custom {
+  background-color: transparent;
+  color: var(--color-primary) !important;
+  border-color: var(--color-primary);
+}
+
+.btn-secondary-custom:hover {
+  background-color: var(--color-primary);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(232, 93, 42, 0.25);
+}
+
+.btn-secondary-custom:active {
+  transform: translateY(0);
+}
+
+/* Dark Outline Button (for light backgrounds) */
+.btn-dark-outline {
+  background-color: transparent;
+  color: var(--color-secondary) !important;
+  border-color: var(--color-secondary);
+}
+
+.btn-dark-outline:hover {
+  background-color: var(--color-secondary);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+}
+
+/* White Outline Button (for dark CTA banners and hero backgrounds) */
+.btn-white-outline,
+.cta-banner-section .btn-dark-outline {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.btn-white-outline:hover,
+.cta-banner-section .btn-dark-outline:hover {
+  background-color: #FFFFFF !important;
+  color: #111314 !important;
+  border-color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Size Modifiers */
+.btn-sm-custom {
+  padding: 8px 16px;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg-custom {
+  padding: 16px 36px;
+  font-size: 1.0625rem;
+  border-radius: var(--radius-md);
+}
+
+.btn-icon-only {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: var(--radius-md);
+}

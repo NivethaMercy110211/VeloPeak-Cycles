@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cycling Accessories & Gear | Helmets, Lights, Locks, Apparel | VeloPeak Cycles</title>
+  <meta name="description" content="Shop premium cycling accessories at VeloPeak Cycles. MIPS helmets, USB rechargeable bike lights, heavy-duty U-locks, performance apparel and workshop tools.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/bikes.css">
+  <link rel="stylesheet" href="css/accessories.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="site-container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html" id="brand-logo-link">
+          <div class="brand-logo-icon"><i class="bi bi-bicycle"></i></div>
+          <div class="brand-text-group">
+            <span class="brand-name">VeloPeak <span>Cycles</span></span>
+            <span class="brand-tagline">Ride Further. Ride Better.</span>
+          </div>
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarMain">
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="bikes.html">Bikes</a></li>
+            <li class="nav-item"><a class="nav-link active" href="accessories.html">Accessories</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Repair Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="header-actions">
+          <a href="login.html" class="btn-custom btn-secondary-custom btn-sm-custom d-none d-sm-inline-flex">
+            <i class="bi bi-person"></i> Login
+          </a>
+          <a href="accessories.html" class="header-action-btn" title="View Cart">
+            <i class="bi bi-bag"></i>
+            <span class="badge-pill cart-count-badge">2</span>
+          </a>
+          <button type="button" class="header-action-btn theme-toggle-btn" title="Toggle Dark/Light Mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button type="button" class="header-action-btn rtl-toggle-btn" title="Toggle RTL/LTR">
+            <span>RTL</span>
+          </button>
+          <button class="navbar-toggler header-action-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-logo-icon" style="width:36px;height:36px;font-size:1.1rem;"><i class="bi bi-bicycle"></i></div>
+        <div class="brand-text-group">
+          <span class="brand-name fs-5">VeloPeak <span>Cycles</span></span>
+          <span class="brand-tagline">Ride Further. Ride Better.</span>
+        </div>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column mb-4">
+        <a class="offcanvas-nav-link" href="index.html">Home 1 <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="home-2.html">Home 2 <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="about.html">About <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="bikes.html">Bikes <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link active" href="accessories.html">Accessories <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="services.html">Repair Services <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="brands.html">Brands <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="contact.html">Contact <i class="bi bi-chevron-right"></i></a>
+      </div>
+      <div class="mt-auto pt-3 border-top header-actions-drawer">
+        <a href="login.html" class="btn-custom btn-secondary-custom btn-sm-custom">
+          <i class="bi bi-person"></i> Login
+        </a>
+        <a href="bikes.html" class="header-action-btn" title="View Cart">
+          <i class="bi bi-bag"></i>
+          <span class="badge-pill cart-count-badge">2</span>
+        </a>
+        <button type="button" class="header-action-btn theme-toggle-btn" title="Toggle Dark/Light Mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button type="button" class="header-action-btn rtl-toggle-btn" title="Toggle RTL/LTR">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== PAGE BANNER ==================== -->
+    <section class="page-banner">
+      <img src="assets/images/hero/accessories-banner.png" alt="VeloPeak Cycling Accessories" class="page-banner-bg">
+      <div class="site-container">
+        <div class="page-banner-content">
+          <nav class="breadcrumb-nav">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>Accessories & Gear</span>
+          </nav>
+          <h1 class="page-banner-title">Engineered Cycling Accessories</h1>
+          <p class="page-banner-subtitle">
+            Safety-certified helmets, ultra-bright illumination, heavy-duty security locks, breathable apparel, and precision workshop maintenance tools.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1. VISUAL CATEGORY NAVIGATION ==================== -->
+    <section class="section-padding-sm bg-light border-bottom">
+      <div class="site-container">
+        <h4 class="mb-3 text-center">Explore Gear by Category</h4>
+        <div class="accessories-nav-grid">
+          <a href="#catalog-grid-section" class="acc-cat-item active">
+            <div class="acc-cat-icon"><i class="bi bi-grid-fill"></i></div>
+            <span class="acc-cat-label">All Gear</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item">
+            <div class="acc-cat-icon"><i class="bi bi-shield-check"></i></div>
+            <span class="acc-cat-label">Helmets</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item">
+            <div class="acc-cat-icon"><i class="bi bi-brightness-high"></i></div>
+            <span class="acc-cat-label">Lights</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item">
+            <div class="acc-cat-icon"><i class="bi bi-shield-lock"></i></div>
+            <span class="acc-cat-label">Locks</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item">
+            <div class="acc-cat-icon"><i class="bi bi-person-standing"></i></div>
+            <span class="acc-cat-label">Apparel</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item">
+            <div class="acc-cat-icon"><i class="bi bi-hand-index-thumb"></i></div>
+            <span class="acc-cat-label">Gloves</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item">
+            <div class="acc-cat-icon"><i class="bi bi-bag"></i></div>
+            <span class="acc-cat-label">Bags</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item">
+            <div class="acc-cat-icon"><i class="bi bi-speedometer2"></i></div>
+            <span class="acc-cat-label">Pumps</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item">
+            <div class="acc-cat-icon"><i class="bi bi-wrench"></i></div>
+            <span class="acc-cat-label">Tools</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item">
+            <div class="acc-cat-icon"><i class="bi bi-cpu"></i></div>
+            <span class="acc-cat-label">GPS Tech</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. COMPLETE ACCESSORIES CATALOG GRID ==================== -->
+    <section class="section-padding" id="catalog-grid-section">
+      <div class="site-container">
+        
+        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+          <div>
+            <h2 class="section-title mb-1">Curated Equipment & Upgrades</h2>
+            <p class="section-subtitle">Every accessory tested for real-world reliability and safety standards.</p>
+          </div>
+          <div class="d-flex align-items-center gap-2 mt-3 mt-md-0">
+            <label class="small fw-bold text-muted">Filter By:</label>
+            <select class="catalog-sort-select">
+              <option value="all">All Products</option>
+              <option value="helmets">Helmets</option>
+              <option value="lights">Lighting</option>
+              <option value="locks">Security</option>
+              <option value="apparel">Apparel</option>
+              <option value="pumps">Pumps & Tools</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- 1: AeroShield MIPS Helmet -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/helmet-aero.jpg" alt="AeroShield MIPS Road Helmet" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Helmets</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">AeroShield MIPS Road Helmet</a></h3>
+                <p class="small text-muted mb-2">Integrated rotational impact protection with 22 wind-tunnel tested vents.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-shield text-primary"></i> MIPS Evolve</span>
+                  <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> S, M, L</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$145</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="AeroShield MIPS Helmet">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2: TrailGuard Full-Coverage MTB Helmet -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/helmet-mtb.jpg" alt="TrailGuard Full-Coverage MTB Helmet" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Helmets</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">TrailGuard MTB Helmet</a></h3>
+                <p class="small text-muted mb-2">Extended occipital skull coverage with 3-position adjustable goggle visor.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-shield text-primary"></i> Full Trail</span>
+                  <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> M, L</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$160</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="TrailGuard MTB Helmet">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3: VeloBeam 1200 Smart Light -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/light-lumen-1200.jpg" alt="VeloBeam 1200 Smart Light" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Lights & Visibility</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">VeloBeam 1200 Smart Light</a></h3>
+                <p class="small text-muted mb-2">1200 Lumens with anti-glare road beam cutoff and USB-C fast charging.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-brightness-high text-primary"></i> 1200 Lumens</span>
+                  <span class="accessory-spec-item"><i class="bi bi-battery-charging text-primary"></i> 14h Runtime</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$79</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="VeloBeam 1200 Light">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4: TitanLock Heavy-Duty U-Lock -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/lock-secure-u.jpg" alt="TitanLock Heavy-Duty U-Lock" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Locks & Security</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">TitanLock Heavy-Duty U-Lock</a></h3>
+                <p class="small text-muted mb-2">14mm hardened max-performance steel shackle with anti-twist double deadbolt.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-shield-lock text-primary"></i> Sold Secure Gold</span>
+                  <span class="accessory-spec-item"><i class="bi bi-key text-primary"></i> 3 Laser Keys</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$65</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="TitanLock U-Lock">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5: ProPeloton Aero Thermal Jersey -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/apparel-jersey.jpg" alt="ProPeloton Aero Thermal Jersey" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Apparel</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">ProPeloton Aero Jersey</a></h3>
+                <p class="small text-muted mb-2">Breathable moisture-wicking fabric with 3 deep reinforced rear cargo pockets.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-droplet text-primary"></i> Quick-Dry</span>
+                  <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> S–XXL</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$88</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="ProPeloton Jersey">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6: GelVent Ergonomic Riding Gloves -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/gloves-pro.jpg" alt="GelVent Ergonomic Riding Gloves" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Apparel</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">GelVent Riding Gloves</a></h3>
+                <p class="small text-muted mb-2">Targeted ulnar nerve gel padding to relieve numbness and enhance bar grip.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-hand-thumbs-up text-primary"></i> Anti-Numb</span>
+                  <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> S, M, L, XL</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$34</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="GelVent Gloves">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7: AeroWedge Waterproof Saddle Bag -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/bag-saddle.jpg" alt="AeroWedge Waterproof Saddle Bag" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Bags & Storage</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">AeroWedge Saddle Bag</a></h3>
+                <p class="small text-muted mb-2">0.8L weatherproof storage for spare tube, tire levers, and CO2 canisters.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-water text-primary"></i> IPX6 Waterproof</span>
+                  <span class="accessory-spec-item"><i class="bi bi-box text-primary"></i> 0.8L Cap</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$38</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="AeroWedge Bag">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8: AirPressure Pro Track Floor Pump -->
+          <div class="col-lg-3 col-md-6">
+            <div class="accessory-card">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/pages/air_pump.png" alt="AirPressure Pro Track Floor Pump" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Pumps & Maintenance</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">AirPressure Pro Floor Pump</a></h3>
+                <p class="small text-muted mb-2">160 PSI floor pump with a large gauge and dual-valve head.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-speedometer2 text-primary"></i> 160 PSI Max</span>
+                  <span class="accessory-spec-item"><i class="bi bi-check2 text-primary"></i> Dual Head</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$54</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="AirPressure Floor Pump">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. HELMET SAFETY & MIPS TECHNOLOGY ==================== -->
+    <section class="section-padding bg-light border-top border-bottom">
+      <div class="site-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-badge"><i class="bi bi-shield-shaded"></i> Head Protection</span>
+            <h2 class="section-title">How MIPS Technology Protects Your Brain</h2>
+            <p class="text-body mb-4">
+              Traditional helmets protect against direct radial impacts. MIPS (Multi-directional Impact Protection System) incorporates a low-friction internal layer that allows 10–15mm of relative movement during angled impacts, substantially reducing rotational forces transferred to the brain.
+            </p>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex align-items-start gap-3">
+                <div class="feature-icon-wrapper mb-0" style="width:40px;height:40px;font-size:1.1rem;"><i class="bi bi-check-circle"></i></div>
+                <div>
+                  <strong>Rotational Force Dissipation:</strong>
+                  <div class="text-muted small">Reduces strain on brain tissue during real-world oblique crashes.</div>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3">
+                <div class="feature-icon-wrapper mb-0" style="width:40px;height:40px;font-size:1.1rem;"><i class="bi bi-wind"></i></div>
+                <div>
+                  <strong>Optimized Airflow Channels:</strong>
+                  <div class="text-muted small">MIPS Evolve aligns seamlessly with helmet vents without impeding cooling.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/images/pages/gear_checklist-1.png" alt="Black performance cycling helmet with adjustable fit system" class="guide-feature-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. LIGHTING & LUMENS VISIBILITY GUIDE ==================== -->
+    <section class="section-padding">
+      <div class="site-container">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-brightness-alt-high-fill"></i> Illumination Science</span>
+          <h2 class="section-title">Choosing the Right Light for Your Route</h2>
+          <p class="section-subtitle">Matching lumen output and beam pattern to city streets, unlit country roads, or pitch-black trails.</p>
+        </div>
+
+        <div class="row g-4 lighting-guide-grid">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon-wrapper"><i class="bi bi-buildings"></i></div>
+              <h4 class="feature-title">City & Street Lit Roads</h4>
+              <span class="badge bg-primary text-white w-auto align-self-start mb-2">200 – 450 Lumens</span>
+              <p class="feature-desc">Purpose: To be seen by drivers. Flashing daytime mode with side cutouts for 180-degree intersection visibility.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon-wrapper"><i class="bi bi-moon-stars"></i></div>
+              <h4 class="feature-title">Unlit Suburbs & Commuting</h4>
+              <span class="badge bg-primary text-white w-auto align-self-start mb-2">600 – 1000 Lumens</span>
+              <p class="feature-desc">Purpose: To see potholes and obstacles at 25km/h. Anti-glare shaped beam that lights 40 meters ahead without blinding oncoming cyclists.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <div class="feature-card">
+              <div class="feature-icon-wrapper"><i class="bi bi-tree"></i></div>
+              <h4 class="feature-title">Night Trails & Singletrack</h4>
+              <span class="badge bg-primary text-white w-auto align-self-start mb-2">1200 – 2000+ Lumens</span>
+              <p class="feature-desc">Purpose: Broad floodlight for fast downhill navigation. Wide dispersion pattern illuminating corner apexes, rocks and low-hanging branches.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. LOCKING SECURITY GUIDE ==================== -->
+    <section class="section-padding bg-light border-top border-bottom">
+      <div class="site-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <img src="assets/images/pages/urban_commuter.png" alt="Urban cyclist commuting with security-ready gear" class="guide-feature-image">
+          </div>
+          <div class="col-lg-6">
+            <span class="section-badge"><i class="bi bi-shield-lock-fill"></i> Security Standards</span>
+            <h2 class="section-title">Hardened Steel vs Opportunistic Theft</h2>
+            <p class="text-body mb-4">
+              90% of bicycle thefts involve cable cutters slicing soft braided wires in under 10 seconds. All VeloPeak U-locks and heavy chains use case-hardened boron-manganese alloys that resist hand cutters and leverage attacks.
+            </p>
+            <div class="p-3 bg-white rounded-3 border mb-3">
+              <div class="fw-bold text-heading mb-1"><i class="bi bi-award text-primary me-2"></i> Sold Secure Gold Rating</div>
+              <p class="small text-muted mb-0">Independently tested against 5-minute dedicated attacks by European lock certification institutes.</p>
+            </div>
+            <a href="accessory-details.html" class="btn-custom btn-primary-custom">Explore TitanLock U-Lock</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. CYCLING APPAREL LAYERING SYSTEM ==================== -->
+    <section class="section-padding climate-control-section">
+      <div class="site-container">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-thermometer-half"></i> Climate Control</span>
+          <h2 class="section-title">The 3-Layer All-Weather Cycling System</h2>
+          <p class="section-subtitle">Maintain ideal core temperature through changing wind, rain, and climb sweat.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon-wrapper"><i class="bi bi-droplet-half"></i></div>
+              <h4 class="feature-title">Layer 1: Base Wicking</h4>
+              <p class="feature-desc">Polypropylene or Merino mesh that sits skin-tight to pull sweat away before windchill can freeze your core during long descents.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon-wrapper"><i class="bi bi-fire"></i></div>
+              <h4 class="feature-title">Layer 2: Thermal Insulation</h4>
+              <p class="feature-desc">Brushed fleece jersey that traps warm air in micro-pockets while breathing excess heat when grinding up steep ascents.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="feature-card">
+              <div class="feature-icon-wrapper"><i class="bi bi-cloud-drizzle"></i></div>
+              <h4 class="feature-title">Layer 3: Wind & Rain Shell</h4>
+              <p class="feature-desc">Ultralight packable windbreaker with taped seams and drop-tail hem to protect your lower back from road spray.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 7. MOBILE REPAIR KIT CHECKLIST ==================== -->
+    <section class="section-padding bg-light border-top border-bottom">
+      <div class="site-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-badge"><i class="bi bi-tools"></i> Self-Sufficiency</span>
+            <h2 class="section-title">What to Carry in Your Saddle Bag</h2>
+            <p class="text-body mb-4">
+              Never get stranded 30 miles from home. A dialed saddle bag weighs less than 400 grams and solves 95% of roadside mechanicals.
+            </p>
+            <div class="row g-3 saddle-bag-checklist-grid">
+              <div class="col-sm-6">
+                <div class="p-3 bg-white rounded-3 border">
+                  <div class="fw-bold"><i class="bi bi-disc text-primary me-2"></i> 2x Tire Levers</div>
+                  <div class="small text-muted">Reinforced nylon levers.</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-white rounded-3 border">
+                  <div class="fw-bold"><i class="bi bi-cpu text-primary me-2"></i> 1x Spare Butyl/TPU Tube</div>
+                  <div class="small text-muted">Correct valve stem length.</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-white rounded-3 border">
+                  <div class="fw-bold"><i class="bi bi-lightning text-primary me-2"></i> 2x 16g CO2 + Head</div>
+                  <div class="small text-muted">Instant 90 PSI inflation.</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-white rounded-3 border">
+                  <div class="fw-bold"><i class="bi bi-wrench text-primary me-2"></i> Multi-Tool with Chain Tool</div>
+                  <div class="small text-muted">4, 5, 6mm Hex & T25 Torx.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/images/accessories/repair-tool-kit.jpg" alt="VeloPeak Roadside Repair Essentials" class="img-fluid rounded-4 shadow-sm w-100">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 8. FINAL CTA BANNER ==================== -->
+    <section class="cta-banner-section">
+      <img src="assets/images/cta/accessories-cta.png" alt="Accessories workbench" class="cta-banner-bg">
+      <div class="site-container">
+        <div class="cta-banner-content">
+          <span class="badge-custom badge-primary mb-3">Free Express Delivery over $75</span>
+          <h2 class="cta-banner-title">Equip Your Journey With Essential Gear.</h2>
+          <p class="cta-banner-text">
+            From MIPS road helmets to smart 1200 lumen lighting and workshop maintenance tools, explore tested accessories ready for your next ride.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="bikes.html" class="btn-custom btn-primary-custom btn-lg-custom">Explore Bicycles</a>
+            <a href="services.html" class="btn-custom btn-dark-outline btn-lg-custom">Workshop Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-brand-col">
+          <a class="footer-logo" href="index.html">
+            <div class="brand-logo-icon"><i class="bi bi-bicycle"></i></div>
+            <div class="brand-text-group">
+              <span class="brand-name">VeloPeak <span>Cycles</span></span>
+              <span class="brand-tagline">Ride Further. Ride Better.</span>
+            </div>
+          </a>
+          <p class="footer-tagline-text">
+            Performance Bicycles, Technical Gear, Precision Repairs and Community Ride Support. Ride Further. Ride Better.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" fill="#000000"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#ig-grad)"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><svg width="20" height="14" viewBox="0 0 24 17" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 2.205a3.02 3.02 0 0 0-2.122-2.137C19.545 0 12 0 12 0s-7.545 0-9.373.068a3.02 3.02 0 0 0-2.122 2.137C0 3.964 0 8.5 0 8.5s0 4.536.505 6.295a3.02 3.02 0 0 0 2.122 2.137C4.455 17 12 17 12 17s7.545 0 9.373-.068a3.02 3.02 0 0 0 2.122-2.137C24 13.036 24 8.5 24 8.5s0-4.536-.505-6.295zM9.545 12.068V4.932L15.818 8.5l-6.273 3.568z" fill="#FF0000"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#1877F2"/></svg></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Bicycles</h4>
+          <ul class="footer-nav-list">
+            <li><a href="bikes.html?type=road" class="footer-nav-link">Road Bikes</a></li>
+            <li><a href="bikes.html?type=mountain" class="footer-nav-link">Mountain Bikes</a></li>
+            <li><a href="bikes.html?type=hybrid" class="footer-nav-link">Hybrid Bikes</a></li>
+            <li><a href="bikes.html?type=electric" class="footer-nav-link">Electric Bikes</a></li>
+            <li><a href="bikes.html?type=kids" class="footer-nav-link">Kids & Youth</a></li>
+            <li><a href="bike-details.html" class="footer-nav-link">Apex R1 Flagship</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Gear & Service</h4>
+          <ul class="footer-nav-list">
+            <li><a href="accessories.html" class="footer-nav-link">Helmets & MIPS</a></li>
+            <li><a href="accessories.html" class="footer-nav-link">Smart Illumination</a></li>
+            <li><a href="accessories.html" class="footer-nav-link">Heavy-Duty Locks</a></li>
+            <li><a href="services.html" class="footer-nav-link">Tune-Up Packages</a></li>
+            <li><a href="services.html#individual-repairs" class="footer-nav-link">Wheel & Brake Repair</a></li>
+            <li><a href="services.html#booking-section" class="footer-nav-link">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Store & Workshop</h4>
+          <ul class="footer-contact-list mb-3">
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>742 Velodrome Way, Cycle District, CA 94107</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>Sales & Showroom: (555) 835-6732</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <span>Mon–Sat: 9:00 AM – 7:00 PM | Sun: 10:00 AM – 5:00 PM</span>
+            </li>
+          </ul>
+          <form class="footer-newsletter-form">
+            <input type="email" class="footer-newsletter-input" placeholder="Join Ride Notes Newsletter" required>
+            <button type="submit" class="btn-custom btn-primary-custom btn-sm-custom">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VeloPeak Cycles. All rights reserved. Ride Further. Ride Better.</div>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Workshop</a>
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

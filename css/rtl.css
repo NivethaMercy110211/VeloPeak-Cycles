@@ -1,0 +1,91 @@
+/* ==========================================================================
+   RTL (Right-to-Left) Stylesheet
+   Full layout flipping for bidirectional support
+   ========================================================================== */
+
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .me-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+
+[dir="rtl"] .ms-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
+}
+
+/* Header RTL */
+[dir="rtl"] .navbar-brand {
+  flex-direction: row;
+}
+
+[dir="rtl"] .header-actions {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-action-btn .badge-pill {
+  right: auto;
+  left: -4px;
+}
+
+[dir="rtl"] .offcanvas-nav-link {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .offcanvas-row-arrow {
+  transform: scaleX(-1);
+}
+
+/* Product Card RTL */
+[dir="rtl"] .product-card-badge {
+  left: auto;
+  right: 16px;
+}
+
+[dir="rtl"] .product-card-wishlist {
+  right: auto;
+  left: 16px;
+}
+
+/* Forms RTL */
+[dir="rtl"] .form-select-custom {
+  background-position: left 16px center;
+  padding-left: 40px;
+  padding-right: 16px;
+}
+
+[dir="rtl"] .filter-checkbox-item input[type="checkbox"],
+[dir="rtl"] .filter-checkbox-item input[type="radio"] {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/* Footer RTL */
+[dir="rtl"] .footer-heading::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-nav-link:hover {
+  padding-left: 0;
+  padding-right: 4px;
+}
+
+/* Package Ribbon RTL */
+[dir="rtl"] .package-ribbon {
+  right: auto;
+  left: 24px;
+}

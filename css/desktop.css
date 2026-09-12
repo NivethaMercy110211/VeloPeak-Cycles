@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Desktop Specific Enhancements (1440px+)
+   ========================================================================== */
+
+@media (min-width: 1440px) {
+  .site-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero-title {
+    font-size: 3.85rem;
+  }
+
+  .product-card-img-wrapper {
+    height: 280px;
+  }
+}

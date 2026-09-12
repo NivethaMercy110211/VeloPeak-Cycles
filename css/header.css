@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Header & Navigation Styles
+   Sticky navbar with logo, centered navigation, login, theme, RTL toggle
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.site-header.is-scrolled {
+  box-shadow: var(--shadow-sm);
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar {
+  padding: 12px 0;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brand-logo-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.navbar-brand:hover .brand-logo-icon {
+  transform: scale(1.05);
+  background: #111314;
+}
+
+.brand-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.brand-name span {
+  color: var(--color-primary);
+}
+
+.brand-tagline {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Nav links */
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  padding: 8px 14px !important;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.nav-link.active {
+  color: var(--color-primary) !important;
+  font-weight: 700;
+}
+
+/* Header Action Controls */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-action-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  text-decoration: none;
+}
+
+.header-action-btn:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.header-action-btn .badge-pill {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.rtl-toggle-btn {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  width: auto;
+  padding: 0 10px;
+}
+
+/* Offcanvas Menu */
+.offcanvas {
+  background-color: var(--bg-surface);
+  color: var(--text-body);
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 20px;
+}
+
+.offcanvas-body {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.offcanvas-nav-link {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  padding: 12px 14px;
+  min-height: 52px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.offcanvas-nav-link:hover,
+.offcanvas-nav-link.active {
+  color: var(--color-primary);
+}
+
+/* Mobile/tablet navigation is intentionally text-only. */
+.offcanvas-nav-link .bi-chevron-right {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .site-header .navbar {
+    min-height: 64px;
+    justify-content: space-between;
+  }
+
+  .site-header .header-actions > :not(.navbar-toggler) {
+    display: none !important;
+  }
+
+  .site-header .navbar-toggler {
+    display: flex !important;
+    margin: 0;
+  }
+}
+
+.offcanvas-body .header-actions-drawer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}

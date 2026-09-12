@@ -1,0 +1,319 @@
+/* ==========================================================================
+   Repair Services & Workshop Styles
+   Package pricing, responsive pricing table/cards, 24-point checklist
+   ========================================================================== */
+
+/* Service Package Cards */
+.package-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.package-card.featured {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-surface);
+}
+
+.package-ribbon {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.package-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: var(--space-8);
+}
+
+.package-desc {
+  font-size: 0.9375rem;
+  color: var(--text-body);
+  margin-bottom: var(--space-24);
+}
+
+.package-price-wrap {
+  margin-bottom: var(--space-24);
+  padding-bottom: var(--space-24);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.package-price-sub {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  display: block;
+}
+
+.package-price {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.package-turnaround {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-body);
+  margin-top: 6px;
+}
+
+.package-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-32) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.package-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9375rem;
+  color: var(--text-heading);
+}
+
+.package-feature-item i {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.package-card-action {
+  margin-top: auto;
+}
+
+/* Individual Repair Pricing Table & Stacked Cards */
+.repair-table-wrapper {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.repair-table {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: collapse;
+}
+
+.repair-table th {
+  background: var(--bg-secondary);
+  color: var(--text-heading);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 16px 24px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.repair-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-body);
+  vertical-align: middle;
+}
+
+.repair-table tr:last-child td {
+  border-bottom: none;
+}
+
+.repair-service-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-heading);
+  display: block;
+}
+
+.repair-service-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 992px) {
+  .repair-table th,
+  .repair-table td {
+    white-space: nowrap;
+  }
+}
+
+.repair-price-tag {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+/* Mobile Stacked Repair Cards (Shown on narrow viewports) */
+.repair-cards-mobile {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.repair-card-mobile-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.repair-card-mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* 25-Point Inspection Quality Control Section with Background Image */
+.inspection-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.inspection-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.inspection-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.inspection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(14, 18, 22, 0.86) 0%, rgba(14, 18, 22, 0.92) 100%);
+}
+
+.inspection-section .section-badge {
+  background: rgba(235, 94, 40, 0.2);
+  color: #FF8A5B;
+  border: 1px solid rgba(235, 94, 40, 0.4);
+}
+
+.inspection-section .section-title {
+  color: #FFFFFF;
+}
+
+.inspection-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.inspection-section .checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.inspection-section .checklist-item {
+  background: rgba(22, 27, 34, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #F0F6FC;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.inspection-section .checklist-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  background: rgba(30, 37, 48, 0.96);
+}
+
+.inspection-section .checklist-item i {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* 5-Step Repair Process */
+.process-step-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  position: relative;
+  height: 100%;
+}
+
+.process-step-num {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary-light);
+  line-height: 1;
+  margin-bottom: var(--space-16);
+}
+
+.process-step-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-8);
+}
+/* Full-width visual for the repair process */
+.repair-process-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}

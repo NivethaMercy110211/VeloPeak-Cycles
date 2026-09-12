@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bicycles Fleet | Road, Mountain, Hybrid & Electric | VeloPeak Cycles</title>
+  <meta name="description" content="Browse VeloPeak Cycles complete fleet of performance road bikes, rugged mountain trail bikes, hybrid commuters, and high-torque electric bicycles.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/bikes.css">
+  <link rel="stylesheet" href="css/accessories.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/filters.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/dark-theme.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/tablet.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="site-container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html" id="brand-logo-link">
+          <div class="brand-logo-icon"><i class="bi bi-bicycle"></i></div>
+          <div class="brand-text-group">
+            <span class="brand-name">VeloPeak <span>Cycles</span></span>
+            <span class="brand-tagline">Ride Further. Ride Better.</span>
+          </div>
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarMain">
+          <ul class="navbar-nav mb-2 mb-lg-0 gap-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="bikes.html">Bikes</a></li>
+            <li class="nav-item"><a class="nav-link" href="accessories.html">Accessories</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Repair Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="header-actions">
+          <a href="login.html" class="btn-custom btn-secondary-custom btn-sm-custom d-none d-sm-inline-flex">
+            <i class="bi bi-person"></i> Login
+          </a>
+          <a href="bikes.html" class="header-action-btn" title="View Cart">
+            <i class="bi bi-bag"></i>
+            <span class="badge-pill cart-count-badge">2</span>
+          </a>
+          <button type="button" class="header-action-btn theme-toggle-btn" title="Toggle Dark/Light Mode">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+          <button type="button" class="header-action-btn rtl-toggle-btn" title="Toggle RTL/LTR">
+            <span>RTL</span>
+          </button>
+          <button class="navbar-toggler header-action-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenuOffcanvas">
+            <i class="bi bi-list fs-5"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenuOffcanvas">
+    <div class="offcanvas-header">
+      <div class="d-flex align-items-center gap-2">
+        <div class="brand-logo-icon" style="width:36px;height:36px;font-size:1.1rem;"><i class="bi bi-bicycle"></i></div>
+        <div class="brand-text-group">
+          <span class="brand-name fs-5">VeloPeak <span>Cycles</span></span>
+          <span class="brand-tagline">Ride Further. Ride Better.</span>
+        </div>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column mb-4">
+        <a class="offcanvas-nav-link" href="index.html">Home 1 <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="home-2.html">Home 2 <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="about.html">About <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link active" href="bikes.html">Bikes <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="accessories.html">Accessories <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="services.html">Repair Services <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="brands.html">Brands <i class="bi bi-chevron-right"></i></a>
+        <a class="offcanvas-nav-link" href="contact.html">Contact <i class="bi bi-chevron-right"></i></a>
+      </div>
+      <div class="mt-auto pt-3 border-top header-actions-drawer">
+        <a href="login.html" class="btn-custom btn-secondary-custom btn-sm-custom">
+          <i class="bi bi-person"></i> Login
+        </a>
+        <a href="bikes.html" class="header-action-btn" title="View Cart">
+          <i class="bi bi-bag"></i>
+          <span class="badge-pill cart-count-badge">2</span>
+        </a>
+        <button type="button" class="header-action-btn theme-toggle-btn" title="Toggle Dark/Light Mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <button type="button" class="header-action-btn rtl-toggle-btn" title="Toggle RTL/LTR">
+          <span>RTL</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== PAGE BANNER ==================== -->
+    <section class="page-banner">
+      <img src="assets/images/hero/bikes-banner.png" alt="VeloPeak Complete Bicycles Fleet" class="page-banner-bg">
+      <div class="site-container">
+        <div class="page-banner-content">
+          <nav class="breadcrumb-nav">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>Bicycles Fleet</span>
+          </nav>
+          <h1 class="page-banner-title">The VeloPeak Bicycles Fleet</h1>
+          <p class="page-banner-subtitle">
+            Precision-engineered Road, Mountain, Hybrid, Electric and Kids bicycles configured with premium drivetrains and backed by lifetime frame warranties.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 1. FILTERABLE CATALOG SECTION ==================== -->
+    <section class="section-padding" id="catalog-section">
+      <div class="site-container">
+        <div class="row g-4">
+          
+          <!-- Filters Sidebar (Desktop) -->
+          <div class="col-lg-3 d-none d-lg-block catalog-filter-column">
+            <div class="filter-sidebar">
+              <div class="filter-header">
+                <h3 class="filter-title"><i class="bi bi-sliders text-primary"></i> Refine Bikes</h3>
+                <button type="button" class="filter-reset-btn" id="filter-reset-btn">Reset All</button>
+              </div>
+
+              <form id="catalog-filter-form">
+                <!-- Search Query -->
+                <div class="filter-group">
+                  <h4 class="filter-group-title">Search Models</h4>
+                  <input type="text" class="form-control-custom" id="catalog-search-input" placeholder="e.g. Apex, Summit, Disc...">
+                </div>
+
+                <!-- Category -->
+                <div class="filter-group">
+                  <h4 class="filter-group-title">Bike Type</h4>
+                  <div class="filter-option-list">
+                    <label class="filter-checkbox-item">
+                      <div><input type="checkbox" name="category" value="road"> Road Bikes</div>
+                      <span class="filter-count">(3)</span>
+                    </label>
+                    <label class="filter-checkbox-item">
+                      <div><input type="checkbox" name="category" value="mountain"> Mountain Bikes</div>
+                      <span class="filter-count">(3)</span>
+                    </label>
+                    <label class="filter-checkbox-item">
+                      <div><input type="checkbox" name="category" value="hybrid"> Hybrid Bikes</div>
+                      <span class="filter-count">(2)</span>
+                    </label>
+                    <label class="filter-checkbox-item">
+                      <div><input type="checkbox" name="category" value="electric"> Electric Bikes</div>
+                      <span class="filter-count">(2)</span>
+                    </label>
+                    <label class="filter-checkbox-item">
+                      <div><input type="checkbox" name="category" value="kids"> Kids Bikes</div>
+                      <span class="filter-count">(2)</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Price Range Slider -->
+                <div class="filter-group">
+                  <h4 class="filter-group-title">Maximum Price</h4>
+                  <input type="range" class="price-range-slider" id="filter-price-slider" min="300" max="6000" step="100" value="6000">
+                  <div class="price-range-values">
+                    <span>$300</span>
+                    <span id="price-max-display">$6000</span>
+                  </div>
+                </div>
+
+                <!-- Frame Size -->
+                <div class="filter-group">
+                  <h4 class="filter-group-title">Frame Size</h4>
+                  <div class="filter-option-list">
+                    <label class="filter-checkbox-item"><input type="checkbox" name="size" value="XS"> Extra Small (XS)</label>
+                    <label class="filter-checkbox-item"><input type="checkbox" name="size" value="S"> Small (S)</label>
+                    <label class="filter-checkbox-item"><input type="checkbox" name="size" value="M"> Medium (M)</label>
+                    <label class="filter-checkbox-item"><input type="checkbox" name="size" value="L"> Large (L)</label>
+                    <label class="filter-checkbox-item"><input type="checkbox" name="size" value="XL"> Extra Large (XL)</label>
+                  </div>
+                </div>
+
+                <!-- Wheel Size -->
+                <div class="filter-group">
+                  <h4 class="filter-group-title">Wheel Size</h4>
+                  <div class="filter-option-list">
+                    <label class="filter-checkbox-item"><input type="checkbox" name="wheel" value="700c"> 700c (Road/Gravel)</label>
+                    <label class="filter-checkbox-item"><input type="checkbox" name="wheel" value="29"> 29" (MTB)</label>
+                    <label class="filter-checkbox-item"><input type="checkbox" name="wheel" value="27.5"> 27.5" (Trail)</label>
+                    <label class="filter-checkbox-item"><input type="checkbox" name="wheel" value="24"> 24" (Youth)</label>
+                  </div>
+                </div>
+
+                <!-- Electric / Non-Electric -->
+                <div class="filter-group">
+                  <h4 class="filter-group-title">Drivetrain Type</h4>
+                  <div class="filter-option-list">
+                    <label class="filter-checkbox-item"><input type="checkbox" name="electric" value="standard"> Traditional Pedal</label>
+                    <label class="filter-checkbox-item"><input type="checkbox" name="electric" value="electric"> Electric Assist</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Products Main Area -->
+          <div class="col-lg-9 catalog-products-column">
+            
+            <!-- Toolbar -->
+            <div class="catalog-toolbar">
+              <div class="d-flex align-items-center gap-3">
+                <button class="btn-custom btn-secondary-custom btn-sm-custom d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileFilterDrawer">
+                  <i class="bi bi-sliders"></i> Filters
+                </button>
+                <div class="catalog-results-count" id="catalog-count-display">Showing 8 bikes</div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <label for="catalog-sort-select" class="small fw-bold text-muted d-none d-sm-inline">Sort by:</label>
+                <select class="catalog-sort-select" id="catalog-sort-select">
+                  <option value="featured">Featured Builds</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Active filter tags display -->
+            <div class="active-filters-bar" id="active-filters-container"></div>
+
+            <!-- Products Grid -->
+            <div class="row g-4" id="catalog-products-grid">
+              
+              <!-- 1: Apex R1 Road -->
+              <div class="col-md-6 col-12 product-item-col">
+                <div class="product-card" data-category="road" data-price="1899" data-sizes="XS,S,M,L,XL" data-wheels="700c" data-electric="standard" data-title="Apex R1 Road" data-desc="Carbon fork Shimano 105 24-Speed hydraulic flat mount disc" data-rating="4.9">
+                  <span class="badge-custom badge-primary product-card-badge">Bestseller</span>
+                  <button class="product-card-wishlist" title="Save to wishlist"><i class="bi bi-heart"></i></button>
+                  <div class="product-card-img-wrapper">
+                    <img src="assets/images/bikes/road-apex-r1.jpg" alt="Apex R1 Road" class="product-card-img">
+                  </div>
+                  <div class="product-card-body">
+                    <span class="product-category-tag">Road Cycling</span>
+                    <h3 class="product-card-title"><a href="bike-details.html">Apex R1 Road</a></h3>
+                    <ul class="product-specs-list">
+                      <li class="product-specs-item"><i class="bi bi-cpu"></i> Full Carbon Matrix Fork & Shimano 105 24-Speed</li>
+                      <li class="product-specs-item"><i class="bi bi-shield-check"></i> Shimano Hydraulic Flat Mount Disc Brakes</li>
+                    </ul>
+                    <div class="product-size-pills">
+                      <span class="size-pill">XS</span>
+                      <span class="size-pill">S</span>
+                      <span class="size-pill selected">M</span>
+                      <span class="size-pill">L</span>
+                      <span class="size-pill">XL</span>
+                    </div>
+                    <div class="product-meta-row">
+                      <div class="product-price">$1,899</div>
+                      <div class="product-rating"><i class="bi bi-star-fill"></i> 4.9 (42)</div>
+                    </div>
+                    <div class="product-card-actions">
+                      <a href="bike-details.html" class="btn-custom btn-secondary-custom btn-sm-custom">View Details</a>
+                      <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="Apex R1 Road">Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2: Summit X7 Trail -->
+              <div class="col-md-6 col-12 product-item-col">
+                <div class="product-card" data-category="mountain" data-price="2450" data-sizes="S,M,L,XL" data-wheels="29" data-electric="standard" data-title="Summit X7 Trail" data-desc="140mm air suspension SRAM GX Eagle 12-Speed Maxxis Minion" data-rating="4.8">
+                  <span class="badge-custom badge-secondary product-card-badge">Trail Series</span>
+                  <button class="product-card-wishlist" title="Save to wishlist"><i class="bi bi-heart"></i></button>
+                  <div class="product-card-img-wrapper">
+                    <img src="assets/images/bikes/mtb-summit-x7.jpg" alt="Summit X7 Trail" class="product-card-img">
+                  </div>
+                  <div class="product-card-body">
+                    <span class="product-category-tag">Mountain & Trail</span>
+                    <h3 class="product-card-title"><a href="bike-details.html">Summit X7 Trail</a></h3>
+                    <ul class="product-specs-list">
+                      <li class="product-specs-item"><i class="bi bi-cpu"></i> RockShox 140mm Air Fork & SRAM GX 12-Speed</li>
+                      <li class="product-specs-item"><i class="bi bi-shield-check"></i> 29" Tubeless Ready Maxxis Minion DHF Tires</li>
+                    </ul>
+                    <div class="product-size-pills">
+                      <span class="size-pill">S</span>
+                      <span class="size-pill selected">M</span>
+                      <span class="size-pill">L</span>
+                      <span class="size-pill">XL</span>
+                    </div>
+                    <div class="product-meta-row">
+                      <div class="product-price">$2,450</div>
+                      <div class="product-rating"><i class="bi bi-star-fill"></i> 4.8 (38)</div>
+                    </div>
+                    <div class="product-card-actions">
+                      <a href="bike-details.html" class="btn-custom btn-secondary-custom btn-sm-custom">View Details</a>
+                      <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="Summit X7 Trail">Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3: MetroFlow Hybrid -->
+              <div class="col-md-6 col-12 product-item-col">
+                <div class="product-card" data-category="hybrid" data-price="980" data-sizes="S,M,L" data-wheels="700c" data-electric="standard" data-title="MetroFlow Hybrid" data-desc="6061 alloy frame Shimano Deore 10-Speed rack and fender mounts" data-rating="4.7">
+                  <span class="badge-custom badge-primary product-card-badge">Commuter</span>
+                  <button class="product-card-wishlist" title="Save to wishlist"><i class="bi bi-heart"></i></button>
+                  <div class="product-card-img-wrapper">
+                    <img src="assets/images/bikes/hybrid-metroflow.jpg" alt="MetroFlow Hybrid" class="product-card-img">
+                  </div>
+                  <div class="product-card-body">
+                    <span class="product-category-tag">Hybrid & Urban</span>
+                    <h3 class="product-card-title"><a href="bike-details.html">MetroFlow Hybrid</a></h3>
+                    <ul class="product-specs-list">
+                      <li class="product-specs-item"><i class="bi bi-cpu"></i> 6061 Double-Butted Alloy & Shimano Deore 10-Speed</li>
+                      <li class="product-specs-item"><i class="bi bi-shield-check"></i> Integrated Rack, Mudguard & Kickstand Mounts</li>
+                    </ul>
+                    <div class="product-size-pills">
+                      <span class="size-pill">S</span>
+                      <span class="size-pill selected">M</span>
+                      <span class="size-pill">L</span>
+                    </div>
+                    <div class="product-meta-row">
+                      <div class="product-price">$980</div>
+                      <div class="product-rating"><i class="bi bi-star-fill"></i> 4.7 (54)</div>
+                    </div>
+                    <div class="product-card-actions">
+                      <a href="bike-details.html" class="btn-custom btn-secondary-custom btn-sm-custom">View Details</a>
+                      <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="MetroFlow Hybrid">Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4: VoltRide E2 -->
+              <div class="col-md-6 col-12 product-item-col">
+                <div class="product-card" data-category="electric" data-price="3199" data-sizes="M,L,XL" data-wheels="700c" data-electric="electric" data-title="VoltRide E2" data-desc="250W mid-drive motor 500Wh battery integrated lighting 90km range" data-rating="4.9">
+                  <span class="badge-custom badge-stock product-card-badge">E-Power</span>
+                  <button class="product-card-wishlist" title="Save to wishlist"><i class="bi bi-heart"></i></button>
+                  <div class="product-card-img-wrapper">
+                    <img src="assets/images/bikes/ebike-voltride.jpg" alt="VoltRide E2" class="product-card-img">
+                  </div>
+                  <div class="product-card-body">
+                    <span class="product-category-tag">Electric Commuter</span>
+                    <h3 class="product-card-title"><a href="bike-details.html">VoltRide E2</a></h3>
+                    <ul class="product-specs-list">
+                      <li class="product-specs-item"><i class="bi bi-battery-charging"></i> 250W Mid-Drive Motor & 500Wh Battery (90km Range)</li>
+                      <li class="product-specs-item"><i class="bi bi-shield-check"></i> Integrated StVZO Certified LED Lighting System</li>
+                    </ul>
+                    <div class="product-size-pills">
+                      <span class="size-pill">M</span>
+                      <span class="size-pill selected">L</span>
+                      <span class="size-pill">XL</span>
+                    </div>
+                    <div class="product-meta-row">
+                      <div class="product-price">$3,199</div>
+                      <div class="product-rating"><i class="bi bi-star-fill"></i> 4.9 (29)</div>
+                    </div>
+                    <div class="product-card-actions">
+                      <a href="bike-details.html" class="btn-custom btn-secondary-custom btn-sm-custom">View Details</a>
+                      <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="VoltRide E2">Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5: Junior Trail 24 -->
+              <div class="col-md-6 col-12 product-item-col">
+                <div class="product-card" data-category="kids" data-price="499" data-sizes="24" data-wheels="24" data-electric="standard" data-title="Junior Trail 24" data-desc="Lightweight alloy 8-speed rapidfire child-reach disc brakes" data-rating="4.9">
+                  <span class="badge-custom badge-secondary product-card-badge">Youth Series</span>
+                  <button class="product-card-wishlist" title="Save to wishlist"><i class="bi bi-heart"></i></button>
+                  <div class="product-card-img-wrapper">
+                    <img src="assets/images/bikes/kids-trail-24.jpg" alt="Junior Trail 24" class="product-card-img">
+                  </div>
+                  <div class="product-card-body">
+                    <span class="product-category-tag">Kids & Youth</span>
+                    <h3 class="product-card-title"><a href="bike-details.html">Junior Trail 24</a></h3>
+                    <ul class="product-specs-list">
+                      <li class="product-specs-item"><i class="bi bi-cpu"></i> 6061 Lightweight Alloy Frame & 8-Speed Rapidfire</li>
+                      <li class="product-specs-item"><i class="bi bi-shield-check"></i> Proportional Cranks & Easy-Reach Disc Brakes</li>
+                    </ul>
+                    <div class="product-size-pills">
+                      <span class="size-pill selected">24" Wheels (Ages 7-11)</span>
+                    </div>
+                    <div class="product-meta-row">
+                      <div class="product-price">$499</div>
+                      <div class="product-rating"><i class="bi bi-star-fill"></i> 4.9 (61)</div>
+                    </div>
+                    <div class="product-card-actions">
+                      <a href="bike-details.html" class="btn-custom btn-secondary-custom btn-sm-custom">View Details</a>
+                      <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="Junior Trail 24">Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6: AeroStorm Pro Disc -->
+              <div class="col-md-6 col-12 product-item-col">
+                <div class="product-card" data-category="road" data-price="4499" data-sizes="S,M,L" data-wheels="700c" data-electric="standard" data-title="AeroStorm Pro Disc" data-desc="Ultegra Di2 electronic 50mm carbon wheelset aero geometry" data-rating="5.0">
+                  <span class="badge-custom badge-primary product-card-badge">Pro Spec</span>
+                  <button class="product-card-wishlist" title="Save to wishlist"><i class="bi bi-heart"></i></button>
+                  <div class="product-card-img-wrapper">
+                    <img src="assets/images/bikes/road-aero-pro.jpg" alt="AeroStorm Pro Disc" class="product-card-img">
+                  </div>
+                  <div class="product-card-body">
+                    <span class="product-category-tag">Race Performance</span>
+                    <h3 class="product-card-title"><a href="bike-details.html">AeroStorm Pro Disc</a></h3>
+                    <ul class="product-specs-list">
+                      <li class="product-specs-item"><i class="bi bi-cpu"></i> Shimano Ultegra Di2 Electronic 12-Speed Group</li>
+                      <li class="product-specs-item"><i class="bi bi-shield-check"></i> 50mm Carbon Aero Wheelset & Integrated Cable Routing</li>
+                    </ul>
+                    <div class="product-size-pills">
+                      <span class="size-pill">S</span>
+                      <span class="size-pill selected">M</span>
+                      <span class="size-pill">L</span>
+                    </div>
+                    <div class="product-meta-row">
+                      <div class="product-price">$4,499</div>
+                      <div class="product-rating"><i class="bi bi-star-fill"></i> 5.0 (17)</div>
+                    </div>
+                    <div class="product-card-actions">
+                      <a href="bike-details.html" class="btn-custom btn-secondary-custom btn-sm-custom">View Details</a>
+                      <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="AeroStorm Pro Disc">Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7: Enduro 9 Carbon -->
+              <div class="col-md-6 col-12 product-item-col">
+                <div class="product-card" data-category="mountain" data-price="5250" data-sizes="M,L,XL" data-wheels="29" data-electric="standard" data-title="Enduro 9 Carbon" data-desc="Fox Factory 36 Kashima 160mm SRAM X01 AXS wireless" data-rating="4.9">
+                  <span class="badge-custom badge-secondary product-card-badge">Enduro MTB</span>
+                  <button class="product-card-wishlist" title="Save to wishlist"><i class="bi bi-heart"></i></button>
+                  <div class="product-card-img-wrapper">
+                    <img src="assets/images/pages/enduro_9_factory.png" alt="Enduro 9 Carbon" class="product-card-img">
+                  </div>
+                  <div class="product-card-body">
+                    <span class="product-category-tag">Enduro Mountain</span>
+                    <h3 class="product-card-title"><a href="bike-details.html">Enduro 9 Carbon</a></h3>
+                    <ul class="product-specs-list">
+                      <li class="product-specs-item"><i class="bi bi-cpu"></i> Fox Factory 36 160mm & SRAM X01 AXS Wireless</li>
+                      <li class="product-specs-item"><i class="bi bi-shield-check"></i> Full Carbon Monocoque Frame & Dropper Seatpost</li>
+                    </ul>
+                    <div class="product-size-pills">
+                      <span class="size-pill">M</span>
+                      <span class="size-pill selected">L</span>
+                      <span class="size-pill">XL</span>
+                    </div>
+                    <div class="product-meta-row">
+                      <div class="product-price">$5,250</div>
+                      <div class="product-rating"><i class="bi bi-star-fill"></i> 4.9 (23)</div>
+                    </div>
+                    <div class="product-card-actions">
+                      <a href="bike-details.html" class="btn-custom btn-secondary-custom btn-sm-custom">View Details</a>
+                      <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="Enduro 9 Carbon">Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 8: RidgeForm Gravel GX -->
+              <div class="col-md-6 col-12 product-item-col">
+                <div class="product-card" data-category="hybrid" data-price="2199" data-sizes="XS,S,M,L" data-wheels="700c" data-electric="standard" data-title="RidgeForm Gravel GX" data-desc="Shimano GRX 810 1x11 Maxxis 45mm tubeless tire clearance" data-rating="4.8">
+                  <span class="badge-custom badge-primary product-card-badge">All-Road</span>
+                  <button class="product-card-wishlist" title="Save to wishlist"><i class="bi bi-heart"></i></button>
+                  <div class="product-card-img-wrapper">
+                    <img src="assets/images/pages/ridgeform_gravel_gx.png" alt="RidgeForm Gravel GX" class="product-card-img">
+                  </div>
+                  <div class="product-card-body">
+                    <span class="product-category-tag">Gravel & All-Road</span>
+                    <h3 class="product-card-title"><a href="bike-details.html">RidgeForm Gravel GX</a></h3>
+                    <ul class="product-specs-list">
+                      <li class="product-specs-item"><i class="bi bi-cpu"></i> Shimano GRX 810 1x11 Clutch Drivetrain</li>
+                      <li class="product-specs-item"><i class="bi bi-shield-check"></i> 45mm Tire Clearance & Triple Bottle Cage Mounts</li>
+                    </ul>
+                    <div class="product-size-pills">
+                      <span class="size-pill">XS</span>
+                      <span class="size-pill">S</span>
+                      <span class="size-pill selected">M</span>
+                      <span class="size-pill">L</span>
+                    </div>
+                    <div class="product-meta-row">
+                      <div class="product-price">$2,199</div>
+                      <div class="product-rating"><i class="bi bi-star-fill"></i> 4.8 (34)</div>
+                    </div>
+                    <div class="product-card-actions">
+                      <a href="bike-details.html" class="btn-custom btn-secondary-custom btn-sm-custom">View Details</a>
+                      <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="RidgeForm Gravel GX">Shop Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile Filter Offcanvas Drawer -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileFilterDrawer">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title"><i class="bi bi-sliders text-primary"></i> Filter Bicycles</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p class="text-muted small">Use the desktop filter settings or adjust category filters directly on screen.</p>
+        <button type="button" class="btn-custom btn-primary-custom w-100" data-bs-dismiss="offcanvas">Apply Filters</button>
+      </div>
+    </div>
+
+    <!-- ==================== 2. BIKE SIZING & GEOMETRY GUIDE ==================== -->
+    <section class="section-padding bg-light border-top border-bottom">
+      <div class="site-container">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-rulers"></i> Rider Fit Matrix</span>
+          <h2 class="section-title">Frame Sizing & Fit Advisor</h2>
+          <p class="section-subtitle">Find the dialed frame size matching your height and inseam measurements.</p>
+        </div>
+
+        <div class="table-responsive bg-white rounded-4 border shadow-sm p-3 bike-comparison-scroll fit-sizing-scroll"
+          role="region" aria-label="Scrollable bicycle frame sizing table" tabindex="0">
+          <table class="table table-hover align-middle mb-0 bike-comparison-table fit-sizing-table">
+            <thead class="table-light">
+              <tr>
+                <th class="py-3 px-3">Frame Size</th>
+                <th class="py-3 px-3">Rider Height (cm)</th>
+                <th class="py-3 px-3">Rider Height (ft/in)</th>
+                <th class="py-3 px-3">Inseam Range</th>
+                <th class="py-3 px-3">Recommended Reach</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold px-3"><span class="badge bg-secondary text-white">XS</span> (49-51cm)</td>
+                <td class="px-3">152 cm – 162 cm</td>
+                <td class="px-3">5'0" – 5'4"</td>
+                <td class="px-3">68 – 73 cm</td>
+                <td class="px-3">365 – 375 mm</td>
+              </tr>
+              <tr>
+                <td class="fw-bold px-3"><span class="badge bg-secondary text-white">S</span> (52-54cm)</td>
+                <td class="px-3">163 cm – 172 cm</td>
+                <td class="px-3">5'4" – 5'8"</td>
+                <td class="px-3">74 – 79 cm</td>
+                <td class="px-3">375 – 385 mm</td>
+              </tr>
+              <tr>
+                <td class="fw-bold px-3"><span class="badge bg-primary text-white">M</span> (54-56cm)</td>
+                <td class="px-3">173 cm – 181 cm</td>
+                <td class="px-3">5'8" – 5'11"</td>
+                <td class="px-3">80 – 84 cm</td>
+                <td class="px-3">385 – 395 mm</td>
+              </tr>
+              <tr>
+                <td class="fw-bold px-3"><span class="badge bg-secondary text-white">L</span> (56-58cm)</td>
+                <td class="px-3">182 cm – 190 cm</td>
+                <td class="px-3">5'11" – 6'3"</td>
+                <td class="px-3">85 – 89 cm</td>
+                <td class="px-3">395 – 405 mm</td>
+              </tr>
+              <tr>
+                <td class="fw-bold px-3"><span class="badge bg-secondary text-white">XL</span> (58-61cm)</td>
+                <td class="px-3">191 cm – 200 cm+</td>
+                <td class="px-3">6'3" – 6'7"+</td>
+                <td class="px-3">90 – 96 cm</td>
+                <td class="px-3">405 – 418 mm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. FRAME MATERIAL COMPARISON ==================== -->
+    <section class="section-padding">
+      <div class="site-container">
+        <div class="section-header text-center">
+          <span class="section-badge"><i class="bi bi-layers-fill"></i> Frame Engineering</span>
+          <h2 class="section-title">Carbon Matrix vs 6061 Double-Butted Alloy</h2>
+          <p class="section-subtitle">Both frame materials are optimized for performance, durability, and ride feel.</p>
+        </div>
+
+        <div class="row g-4 frame-engineering-grid">
+          <div class="col-lg-6">
+            <div class="feature-card">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="feature-icon-wrapper mb-0"><i class="bi bi-feather"></i></div>
+                <div>
+                  <h4 class="mb-0">Toray High-Modulus Carbon Matrix</h4>
+                  <span class="text-primary small fw-bold">Ultralight & Vibration Dampening</span>
+                </div>
+              </div>
+              <p class="feature-desc mb-3">
+                Engineered with directional fiber layups that offer high torsional stiffness at the bottom bracket for sprint power, while naturally absorbing road micro-vibrations for all-day comfort.
+              </p>
+              <ul class="list-unstyled d-flex flex-column gap-2 text-muted small">
+                <li><i class="bi bi-check-circle text-primary me-2"></i> Average frame weight: 850g – 1,050g</li>
+                <li><i class="bi bi-check-circle text-primary me-2"></i> Seamless aero-sculpted tube transitions</li>
+                <li><i class="bi bi-check-circle text-primary me-2"></i> Featured on Apex R1 and AeroStorm Pro builds</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="feature-card">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="feature-icon-wrapper mb-0"><i class="bi bi-shield-shaded"></i></div>
+                <div>
+                  <h4 class="mb-0">6061 Double-Butted Hydroformed Alloy</h4>
+                  <span class="text-primary small fw-bold">Maximum Durability & Value</span>
+                </div>
+              </div>
+              <p class="feature-desc mb-3">
+                Custom hydroformed aluminum tubes with variable wall thickness — thicker at high-stress weld junctions and thinner in the center to save weight without sacrificing impact toughness.
+              </p>
+              <ul class="list-unstyled d-flex flex-column gap-2 text-muted small">
+                <li><i class="bi bi-check-circle text-primary me-2"></i> Smooth-weld aesthetic with internal cable ports</li>
+                <li><i class="bi bi-check-circle text-primary me-2"></i> High dent resistance for trails and commuter racks</li>
+                <li><i class="bi bi-check-circle text-primary me-2"></i> Featured on MetroFlow, VoltRide and Junior builds</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. PRECISION ASSEMBLY STANDARD ==================== -->
+    <section class="section-padding bg-light border-top border-bottom">
+      <div class="site-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <img src="assets/images/pages/master_mechanic_setup.png" alt="VeloPeak 10-Point Assembly" class="img-fluid rounded-4 shadow-sm w-100">
+          </div>
+          <div class="col-lg-6">
+            <span class="section-badge"><i class="bi bi-check2-all"></i> Master Mechanic Setup</span>
+            <h2 class="section-title">The VeloPeak 10-Point Assembly Guarantee</h2>
+            <p class="text-body mb-4">
+              Unlike boxed online bikes, every bicycle shipped or collected from VeloPeak undergoes an exhaustive 10-point build checklist.
+            </p>
+            <div class="d-flex flex-column gap-2">
+              <div class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> Headset & bottom bracket pre-greased and torqued</div>
+              <div class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> Front and rear derailleur limits indexed under load</div>
+              <div class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> Hydraulic brake pads burnished and rotors centered</div>
+              <div class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> Spoke tension balanced with dial-micrometer truing</div>
+              <div class="d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-primary"></i> 5km road safety test ride before packaging</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. CUSTOM LASER FIT STUDIO ==================== -->
+    <section class="section-padding">
+      <div class="site-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-badge"><i class="bi bi-crosshair"></i> Precision Studio</span>
+            <h2 class="section-title">Book a Laser Bike Fitting Session</h2>
+            <p class="text-body mb-4">
+              Eliminate knee pain, neck tension, and numb hands. Our certified fitting studio measures your flexibility, sit-bone width, knee angle, and reach to tune your cockpit to millimeter precision.
+            </p>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="p-3 bg-light rounded-3 border">
+                  <div class="fw-bold">Dynamic Laser Retül System</div>
+                  <div class="text-muted small">Real-time pedal stroke analysis.</div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-light rounded-3 border">
+                  <div class="fw-bold">Free with<br>Bike Purchase</div>
+                  <div class="text-muted small">Complimentary 30-min fit included.</div>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-custom btn-primary-custom">Book Fitting Consultation <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/images/pages/precision_studio.png" alt="VeloPeak Fitting Studio" class="img-fluid rounded-4 shadow-sm w-100">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. FINAL CTA BANNER ==================== -->
+    <section class="cta-banner-section">
+      <img src="assets/images/cta/bikes-cta.png" alt="Showroom bicycles" class="cta-banner-bg">
+      <div class="site-container">
+        <div class="cta-banner-content">
+          <span class="badge-custom badge-primary mb-3">Lifetime Frame Warranty</span>
+          <h2 class="cta-banner-title">Find Your Ideal Frame Size Today.</h2>
+          <p class="cta-banner-text">
+            All bicycles include precision mechanic assembly, 30-day ride guarantee, and free delivery across California.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="bike-details.html" class="btn-custom btn-primary-custom btn-lg-custom">Explore Flagship Apex R1</a>
+            <a href="contact.html" class="btn-custom btn-dark-outline btn-lg-custom">Visit Showroom</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 footer-brand-col">
+          <a class="footer-logo" href="index.html">
+            <div class="brand-logo-icon"><i class="bi bi-bicycle"></i></div>
+            <div class="brand-text-group">
+              <span class="brand-name">VeloPeak <span>Cycles</span></span>
+              <span class="brand-tagline">Ride Further. Ride Better.</span>
+            </div>
+          </a>
+          <p class="footer-tagline-text">
+            Performance Bicycles, Technical Gear, Precision Repairs and Community Ride Support. Ride Further. Ride Better.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" fill="#000000"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#ig-grad)"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="YouTube"><svg width="20" height="14" viewBox="0 0 24 17" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 2.205a3.02 3.02 0 0 0-2.122-2.137C19.545 0 12 0 12 0s-7.545 0-9.373.068a3.02 3.02 0 0 0-2.122 2.137C0 3.964 0 8.5 0 8.5s0 4.536.505 6.295a3.02 3.02 0 0 0 2.122 2.137C4.455 17 12 17 12 17s7.545 0 9.373-.068a3.02 3.02 0 0 0 2.122-2.137C24 13.036 24 8.5 24 8.5s0-4.536-.505-6.295zM9.545 12.068V4.932L15.818 8.5l-6.273 3.568z" fill="#FF0000"/></svg></a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" fill="#1877F2"/></svg></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Bicycles</h4>
+          <ul class="footer-nav-list">
+            <li><a href="bikes.html?type=road" class="footer-nav-link">Road Bikes</a></li>
+            <li><a href="bikes.html?type=mountain" class="footer-nav-link">Mountain Bikes</a></li>
+            <li><a href="bikes.html?type=hybrid" class="footer-nav-link">Hybrid Bikes</a></li>
+            <li><a href="bikes.html?type=electric" class="footer-nav-link">Electric Bikes</a></li>
+            <li><a href="bikes.html?type=kids" class="footer-nav-link">Kids & Youth</a></li>
+            <li><a href="bike-details.html" class="footer-nav-link">Apex R1 Flagship</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h4 class="footer-heading">Gear & Service</h4>
+          <ul class="footer-nav-list">
+            <li><a href="accessories.html" class="footer-nav-link">Helmets & MIPS</a></li>
+            <li><a href="accessories.html" class="footer-nav-link">Smart Illumination</a></li>
+            <li><a href="accessories.html" class="footer-nav-link">Heavy-Duty Locks</a></li>
+            <li><a href="services.html" class="footer-nav-link">Tune-Up Packages</a></li>
+            <li><a href="services.html#individual-repairs" class="footer-nav-link">Wheel & Brake Repair</a></li>
+            <li><a href="services.html#booking-section" class="footer-nav-link">Book Appointment</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h4 class="footer-heading">Store & Workshop</h4>
+          <ul class="footer-contact-list mb-3">
+            <li class="footer-contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <span>742 Velodrome Way, Cycle District, CA 94107</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-telephone-fill"></i>
+              <span>Sales & Showroom: (555) 835-6732</span>
+            </li>
+            <li class="footer-contact-item">
+              <i class="bi bi-clock-fill"></i>
+              <span>Mon–Sat: 9:00 AM – 7:00 PM | Sun: 10:00 AM – 5:00 PM</span>
+            </li>
+          </ul>
+          <form class="footer-newsletter-form">
+            <input type="email" class="footer-newsletter-input" placeholder="Join Ride Notes Newsletter" required>
+            <button type="submit" class="btn-custom btn-primary-custom btn-sm-custom">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VeloPeak Cycles. All rights reserved. Ride Further. Ride Better.</div>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Workshop</a>
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>
