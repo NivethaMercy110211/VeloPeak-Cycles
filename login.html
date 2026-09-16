@@ -63,17 +63,20 @@
             </div>
 
             <div class="form-group-custom">
-              <div class="d-flex justify-content-between align-items-center mb-1">
-                <label class="form-label-custom mb-0">Password <span class="required-star">*</span></label>
-                <a href="forgot-password.html" class="small text-primary fw-bold text-decoration-none">Forgot Password?</a>
+              <label class="form-label-custom">Password <span class="required-star">*</span></label>
+              <div class="password-input-wrap">
+                <input id="login-password" type="password" class="form-control-custom" placeholder="••••••••" autocomplete="current-password" required>
+                <button type="button" class="password-toggle-btn" data-password-toggle="login-password" aria-label="Show password" aria-pressed="false">
+                  <i class="bi bi-eye" aria-hidden="true"></i>
+                </button>
               </div>
-              <input type="password" class="form-control-custom" placeholder="••••••••" required>
             </div>
 
-            <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="login-options-row">
               <label class="d-flex align-items-center gap-2 small text-muted cursor-pointer mb-0">
-                <input type="checkbox" checked> Remember this device
+                <input type="checkbox" checked> Remember me
               </label>
+              <a href="forgot-password.html" class="small text-primary fw-bold text-decoration-none">Forgot Password?</a>
             </div>
 
             <button type="submit" class="btn-custom btn-primary-custom btn-lg-custom w-100 mb-3" id="login-submit-btn">

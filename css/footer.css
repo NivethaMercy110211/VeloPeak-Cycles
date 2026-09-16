@@ -66,6 +66,12 @@
   display: block;
 }
 
+/* X uses black in light mode; lift it to white for sufficient dark-mode contrast. */
+[data-theme="dark"] .footer-social-btn[aria-label="Twitter / X"] svg path,
+[data-bs-theme="dark"] .footer-social-btn[aria-label="Twitter / X"] svg path {
+  fill: #ffffff;
+}
+
 .footer-social-btn:hover {
   background: rgba(232, 93, 42, 0.08);
   border-color: var(--color-primary);

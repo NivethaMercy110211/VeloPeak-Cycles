@@ -9,8 +9,30 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initCart();
   initNewsletter();
+  initPasswordToggles();
   initScrollAnimations();
 });
+
+/* Accessible password visibility controls */
+function initPasswordToggles() {
+  document.querySelectorAll('[data-password-toggle]').forEach(button => {
+    const input = document.getElementById(button.dataset.passwordToggle);
+    if (!input) return;
+
+    button.addEventListener('click', () => {
+      const showPassword = input.type === 'password';
+      input.type = showPassword ? 'text' : 'password';
+      button.setAttribute('aria-pressed', String(showPassword));
+      button.setAttribute('aria-label', showPassword ? 'Hide password' : 'Show password');
+
+      const icon = button.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('bi-eye', !showPassword);
+        icon.classList.toggle('bi-eye-slash', showPassword);
+      }
+    });
+  });
+}
 
 /* Shared reveal animations for banners, sections, headings, grids and footer */
 function initScrollAnimations() {

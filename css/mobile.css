@@ -293,7 +293,7 @@
     -webkit-backdrop-filter: none;
     border: 0;
     box-shadow: none;
-    padding: 0;
+    padding: 0 16px;
   }
 
   .home-split-hero .hero-subtitle {

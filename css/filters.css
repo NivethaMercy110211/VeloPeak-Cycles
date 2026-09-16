@@ -11,14 +11,12 @@
   padding: var(--space-24);
 }
 
-/* Keep the desktop catalog filters accessible while products scroll. */
+/* Let the complete desktop filter panel flow with the page without an inner scrollbar. */
 @media (min-width: 992px) {
   .filter-sidebar {
-    position: sticky;
-    top: 96px;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
-    scrollbar-gutter: stable;
+    position: static;
+    max-height: none;
+    overflow: visible;
   }
 }
 
