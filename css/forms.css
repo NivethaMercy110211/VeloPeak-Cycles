@@ -82,6 +82,15 @@ textarea.form-control-custom {
   box-shadow: var(--shadow-md);
 }
 
+.booking-form-card > .section-badge {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .booking-form-title {
   font-size: 1.75rem;
   font-weight: 800;

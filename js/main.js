@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletter();
   initPasswordToggles();
   initScrollAnimations();
+  initAccessoryFilters();
 });
 
 /* Accessible password visibility controls */
@@ -254,4 +255,84 @@ function initNewsletter() {
       input.value = '';
     }
   });
+}
+
+/* Accessories Catalog Real-time Category Filtering */
+function initAccessoryFilters() {
+  const catNav = document.getElementById('accessories-category-nav');
+  const catFilterSelect = document.getElementById('accessory-category-filter');
+  const productGrid = document.getElementById('accessories-product-grid');
+  const countSubtitle = document.getElementById('accessory-count-subtitle');
+  if (!productGrid) return;
+
+  const items = Array.from(productGrid.querySelectorAll('.accessory-item-col'));
+  const navItems = catNav ? Array.from(catNav.querySelectorAll('.acc-cat-item')) : [];
+
+  function filterCategory(category) {
+    let visibleCount = 0;
+    items.forEach(item => {
+      const itemCat = item.dataset.category || '';
+      const match = category === 'all' || itemCat === category;
+      if (match) {
+        item.classList.remove('is-hidden');
+        item.style.display = '';
+        visibleCount++;
+      } else {
+        item.classList.add('is-hidden');
+        item.style.display = 'none';
+      }
+    });
+
+    // Update active nav item
+    navItems.forEach(nav => {
+      const navCat = nav.dataset.category || '';
+      nav.classList.toggle('active', navCat === category);
+    });
+
+    // Update select dropdown
+    if (catFilterSelect && catFilterSelect.value !== category) {
+      catFilterSelect.value = category;
+    }
+
+    // Update count subtitle
+    if (countSubtitle) {
+      if (category === 'all') {
+        countSubtitle.textContent = `Showing all ${visibleCount} products across all categories.`;
+      } else {
+        const catMap = {
+          helmets: 'Helmets',
+          lights: 'Lights & Visibility',
+          gloves: 'Gloves',
+          locks: 'Locks & Security',
+          bags: 'Bags & Storage',
+          pumps: 'Pumps & Inflation',
+          tools: 'Tools & Maintenance',
+          gps: 'GPS Trackers & Tech',
+          apparel: 'Apparel'
+        };
+        const catName = catMap[category] || (category.charAt(0).toUpperCase() + category.slice(1));
+        countSubtitle.textContent = `Showing ${visibleCount} product${visibleCount === 1 ? '' : 's'} in ${catName}.`;
+      }
+    }
+  }
+
+  // Nav item click listener
+  navItems.forEach(nav => {
+    nav.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetCat = nav.dataset.category || 'all';
+      filterCategory(targetCat);
+      const catalogSection = document.getElementById('catalog-grid-section');
+      if (catalogSection) {
+        catalogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Select dropdown listener
+  if (catFilterSelect) {
+    catFilterSelect.addEventListener('change', () => {
+      filterCategory(catFilterSelect.value);
+    });
+  }
 }

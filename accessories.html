@@ -141,46 +141,66 @@
     <section class="section-padding-sm bg-light border-bottom">
       <div class="site-container">
         <h4 class="mb-3 text-center">Explore Gear by Category</h4>
-        <div class="accessories-nav-grid">
-          <a href="#catalog-grid-section" class="acc-cat-item active">
-            <div class="acc-cat-icon"><i class="bi bi-grid-fill"></i></div>
+        <div class="accessories-nav-grid" id="accessories-category-nav">
+          <a href="#catalog-grid-section" class="acc-cat-item active" data-category="all">
+            <div class="acc-cat-thumb">
+              <div class="acc-cat-icon"><i class="bi bi-grid-fill"></i></div>
+            </div>
             <span class="acc-cat-label">All Gear</span>
           </a>
-          <a href="#catalog-grid-section" class="acc-cat-item">
-            <div class="acc-cat-icon"><i class="bi bi-shield-check"></i></div>
+          <a href="#catalog-grid-section" class="acc-cat-item" data-category="helmets">
+            <div class="acc-cat-thumb">
+              <img src="assets/images/accessories/helmet-aero.jpg" alt="Helmets" class="acc-cat-img">
+            </div>
             <span class="acc-cat-label">Helmets</span>
           </a>
-          <a href="#catalog-grid-section" class="acc-cat-item">
-            <div class="acc-cat-icon"><i class="bi bi-brightness-high"></i></div>
+          <a href="#catalog-grid-section" class="acc-cat-item" data-category="lights">
+            <div class="acc-cat-thumb">
+              <img src="assets/images/accessories/light-lumen-1200.jpg" alt="Lights" class="acc-cat-img">
+            </div>
             <span class="acc-cat-label">Lights</span>
           </a>
-          <a href="#catalog-grid-section" class="acc-cat-item">
-            <div class="acc-cat-icon"><i class="bi bi-shield-lock"></i></div>
-            <span class="acc-cat-label">Locks</span>
-          </a>
-          <a href="#catalog-grid-section" class="acc-cat-item">
-            <div class="acc-cat-icon"><i class="bi bi-person-standing"></i></div>
-            <span class="acc-cat-label">Apparel</span>
-          </a>
-          <a href="#catalog-grid-section" class="acc-cat-item">
-            <div class="acc-cat-icon"><i class="bi bi-hand-index-thumb"></i></div>
+          <a href="#catalog-grid-section" class="acc-cat-item" data-category="gloves">
+            <div class="acc-cat-thumb">
+              <img src="assets/images/accessories/gloves-pro.jpg" alt="Gloves" class="acc-cat-img">
+            </div>
             <span class="acc-cat-label">Gloves</span>
           </a>
-          <a href="#catalog-grid-section" class="acc-cat-item">
-            <div class="acc-cat-icon"><i class="bi bi-bag"></i></div>
+          <a href="#catalog-grid-section" class="acc-cat-item" data-category="locks">
+            <div class="acc-cat-thumb">
+              <img src="assets/images/accessories/lock-secure-u.jpg" alt="Locks" class="acc-cat-img">
+            </div>
+            <span class="acc-cat-label">Locks</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item" data-category="bags">
+            <div class="acc-cat-thumb">
+              <img src="assets/images/accessories/bag-saddle.jpg" alt="Bags" class="acc-cat-img">
+            </div>
             <span class="acc-cat-label">Bags</span>
           </a>
-          <a href="#catalog-grid-section" class="acc-cat-item">
-            <div class="acc-cat-icon"><i class="bi bi-speedometer2"></i></div>
+          <a href="#catalog-grid-section" class="acc-cat-item" data-category="pumps">
+            <div class="acc-cat-thumb">
+              <img src="assets/images/pages/air_pump.png" alt="Pumps" class="acc-cat-img">
+            </div>
             <span class="acc-cat-label">Pumps</span>
           </a>
-          <a href="#catalog-grid-section" class="acc-cat-item">
-            <div class="acc-cat-icon"><i class="bi bi-wrench"></i></div>
+          <a href="#catalog-grid-section" class="acc-cat-item" data-category="tools">
+            <div class="acc-cat-thumb">
+              <img src="assets/images/pages/gear_checklist-3.png" alt="Tools" class="acc-cat-img">
+            </div>
             <span class="acc-cat-label">Tools</span>
           </a>
-          <a href="#catalog-grid-section" class="acc-cat-item">
-            <div class="acc-cat-icon"><i class="bi bi-cpu"></i></div>
-            <span class="acc-cat-label">GPS Tech</span>
+          <a href="#catalog-grid-section" class="acc-cat-item" data-category="gps">
+            <div class="acc-cat-thumb">
+              <img src="assets/images/pages/gear_checklist-4.png" alt="GPS Trackers" class="acc-cat-img">
+            </div>
+            <span class="acc-cat-label">GPS Trackers</span>
+          </a>
+          <a href="#catalog-grid-section" class="acc-cat-item" data-category="apparel">
+            <div class="acc-cat-thumb">
+              <img src="assets/images/accessories/apparel-jersey.jpg" alt="Apparel" class="acc-cat-img">
+            </div>
+            <span class="acc-cat-label">Apparel</span>
           </a>
         </div>
       </div>
@@ -193,32 +213,36 @@
         <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
           <div>
             <h2 class="section-title mb-1">Curated Equipment & Upgrades</h2>
-            <p class="section-subtitle">Every accessory tested for real-world reliability and safety standards.</p>
+            <p class="section-subtitle" id="accessory-count-subtitle">Showing 16 products across all categories.</p>
           </div>
           <div class="d-flex align-items-center gap-2 mt-3 mt-md-0">
-            <label class="small fw-bold text-muted">Filter By:</label>
-            <select class="catalog-sort-select">
-              <option value="all">All Products</option>
-              <option value="helmets">Helmets</option>
-              <option value="lights">Lighting</option>
-              <option value="locks">Security</option>
-              <option value="apparel">Apparel</option>
-              <option value="pumps">Pumps & Tools</option>
+            <label for="accessory-category-filter" class="small fw-bold text-muted">Category:</label>
+            <select class="catalog-sort-select" id="accessory-category-filter">
+              <option value="all">All Products (16)</option>
+              <option value="helmets">Helmets (3)</option>
+              <option value="lights">Lights & Visibility (2)</option>
+              <option value="gloves">Gloves (2)</option>
+              <option value="locks">Locks & Security (2)</option>
+              <option value="bags">Bags & Storage (2)</option>
+              <option value="pumps">Pumps & Inflation (1)</option>
+              <option value="tools">Tools & Maintenance (1)</option>
+              <option value="gps">GPS Trackers & Tech (2)</option>
+              <option value="apparel">Apparel (1)</option>
             </select>
           </div>
         </div>
 
-        <div class="row g-4">
-          <!-- 1: AeroShield MIPS Helmet -->
-          <div class="col-lg-3 col-md-6">
-            <div class="accessory-card">
+        <div class="row g-4" id="accessories-product-grid">
+          <!-- 1: AeroShield MIPS Road Helmet -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="helmets">
+            <div class="accessory-card" data-category="helmets">
               <div class="accessory-card-img-wrapper">
                 <img src="assets/images/accessories/helmet-aero.jpg" alt="AeroShield MIPS Road Helmet" class="accessory-card-img">
               </div>
               <div class="accessory-card-body">
                 <span class="accessory-category">Helmets</span>
                 <h3 class="accessory-card-title"><a href="accessory-details.html">AeroShield MIPS Road Helmet</a></h3>
-                <p class="small text-muted mb-2">Integrated rotational impact protection with 22 wind-tunnel tested vents.</p>
+                <p class="small text-muted mb-2">Rotational impact protection with 22 wind-tunnel tested aerodynamic cooling vents.</p>
                 <div class="accessory-meta-specs">
                   <span class="accessory-spec-item"><i class="bi bi-shield text-primary"></i> MIPS Evolve</span>
                   <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> S, M, L</span>
@@ -232,15 +256,15 @@
           </div>
 
           <!-- 2: TrailGuard Full-Coverage MTB Helmet -->
-          <div class="col-lg-3 col-md-6">
-            <div class="accessory-card">
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="helmets">
+            <div class="accessory-card" data-category="helmets">
               <div class="accessory-card-img-wrapper">
                 <img src="assets/images/accessories/helmet-mtb.jpg" alt="TrailGuard Full-Coverage MTB Helmet" class="accessory-card-img">
               </div>
               <div class="accessory-card-body">
                 <span class="accessory-category">Helmets</span>
                 <h3 class="accessory-card-title"><a href="accessory-details.html">TrailGuard MTB Helmet</a></h3>
-                <p class="small text-muted mb-2">Extended occipital skull coverage with 3-position adjustable goggle visor.</p>
+                <p class="small text-muted mb-2">Extended occipital skull coverage with 3-position goggle-compatible visor.</p>
                 <div class="accessory-meta-specs">
                   <span class="accessory-spec-item"><i class="bi bi-shield text-primary"></i> Full Trail</span>
                   <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> M, L</span>
@@ -253,16 +277,38 @@
             </div>
           </div>
 
-          <!-- 3: VeloBeam 1200 Smart Light -->
-          <div class="col-lg-3 col-md-6">
-            <div class="accessory-card">
+          <!-- 3: Apex Enduro Carbon Helmet -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="helmets">
+            <div class="accessory-card" data-category="helmets">
               <div class="accessory-card-img-wrapper">
-                <img src="assets/images/accessories/light-lumen-1200.jpg" alt="VeloBeam 1200 Smart Light" class="accessory-card-img">
+                <img src="assets/images/pages/gear_checklist-1.png" alt="Apex Enduro Carbon Helmet" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Helmets</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">Apex Enduro Carbon Helmet</a></h3>
+                <p class="small text-muted mb-2">Ultra-light carbon-composite matrix shell with magnetic Fidlock chin buckle.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-shield-shaded text-primary"></i> Carbon Shell</span>
+                  <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> S, M, L</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$185</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="Apex Enduro Helmet">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4: VeloBeam 1200 Smart Headlight -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="lights">
+            <div class="accessory-card" data-category="lights">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/light-lumen-1200.jpg" alt="VeloBeam 1200 Smart Headlight" class="accessory-card-img">
               </div>
               <div class="accessory-card-body">
                 <span class="accessory-category">Lights & Visibility</span>
                 <h3 class="accessory-card-title"><a href="accessory-details.html">VeloBeam 1200 Smart Light</a></h3>
-                <p class="small text-muted mb-2">1200 Lumens with anti-glare road beam cutoff and USB-C fast charging.</p>
+                <p class="small text-muted mb-2">1200 Lumens with anti-glare road cutoff beam, ambient sensor, and USB-C charging.</p>
                 <div class="accessory-meta-specs">
                   <span class="accessory-spec-item"><i class="bi bi-brightness-high text-primary"></i> 1200 Lumens</span>
                   <span class="accessory-spec-item"><i class="bi bi-battery-charging text-primary"></i> 14h Runtime</span>
@@ -275,9 +321,75 @@
             </div>
           </div>
 
-          <!-- 4: TitanLock Heavy-Duty U-Lock -->
-          <div class="col-lg-3 col-md-6">
-            <div class="accessory-card">
+          <!-- 5: PulseRadar Smart Taillight -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="lights">
+            <div class="accessory-card" data-category="lights">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/light-radar-taillight.jpg" alt="PulseRadar Smart Taillight" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Lights & Visibility</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">PulseRadar Smart Taillight</a></h3>
+                <p class="small text-muted mb-2">Rear vehicle radar detection up to 140m with brake sensor flash and 220° visibility.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-broadcast-pin text-primary"></i> 140m Radar</span>
+                  <span class="accessory-spec-item"><i class="bi bi-eye text-primary"></i> 220° Flare</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$89</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="PulseRadar Taillight">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6: GelVent Ergonomic Riding Gloves -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="gloves">
+            <div class="accessory-card" data-category="gloves">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/gloves-pro.jpg" alt="GelVent Ergonomic Riding Gloves" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Gloves</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">GelVent Riding Gloves</a></h3>
+                <p class="small text-muted mb-2">Targeted ulnar nerve gel padding to relieve hand numbness and enhance bar grip.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-hand-thumbs-up text-primary"></i> Anti-Numb</span>
+                  <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> S, M, L, XL</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$34</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="GelVent Gloves">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7: Velox Armored Enduro Trail Gloves -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="gloves">
+            <div class="accessory-card" data-category="gloves">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/gloves-trail.jpg" alt="Velox Armored Enduro Trail Gloves" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Gloves</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">Velox Armored Trail Gloves</a></h3>
+                <p class="small text-muted mb-2">Full-finger mountain biking gloves with molded knuckle armor and silicone brake levers grip.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-shield-check text-primary"></i> Knuckle Armor</span>
+                  <span class="accessory-spec-item"><i class="bi bi-phone text-primary"></i> Touchscreen</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$48</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="Velox Trail Gloves">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8: TitanLock Heavy-Duty U-Lock -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="locks">
+            <div class="accessory-card" data-category="locks">
               <div class="accessory-card-img-wrapper">
                 <img src="assets/images/accessories/lock-secure-u.jpg" alt="TitanLock Heavy-Duty U-Lock" class="accessory-card-img">
               </div>
@@ -297,60 +409,38 @@
             </div>
           </div>
 
-          <!-- 5: ProPeloton Aero Thermal Jersey -->
-          <div class="col-lg-3 col-md-6">
-            <div class="accessory-card">
+          <!-- 9: IronFold 8-Bar Compact Folding Lock -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="locks">
+            <div class="accessory-card" data-category="locks">
               <div class="accessory-card-img-wrapper">
-                <img src="assets/images/accessories/apparel-jersey.jpg" alt="ProPeloton Aero Thermal Jersey" class="accessory-card-img">
+                <img src="assets/images/accessories/lock-folding.jpg" alt="IronFold 8-Bar Compact Folding Lock" class="accessory-card-img">
               </div>
               <div class="accessory-card-body">
-                <span class="accessory-category">Apparel</span>
-                <h3 class="accessory-card-title"><a href="accessory-details.html">ProPeloton Aero Jersey</a></h3>
-                <p class="small text-muted mb-2">Breathable moisture-wicking fabric with 3 deep reinforced rear cargo pockets.</p>
+                <span class="accessory-category">Locks & Security</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">IronFold Compact Lock</a></h3>
+                <p class="small text-muted mb-2">Hardened steel folding plates with anti-rattle frame holster and drill-resistant cylinder.</p>
                 <div class="accessory-meta-specs">
-                  <span class="accessory-spec-item"><i class="bi bi-droplet text-primary"></i> Quick-Dry</span>
-                  <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> S–XXL</span>
+                  <span class="accessory-spec-item"><i class="bi bi-link-45deg text-primary"></i> 8-Bar Alloy</span>
+                  <span class="accessory-spec-item"><i class="bi bi-bicycle text-primary"></i> Frame Holster</span>
                 </div>
                 <div class="accessory-card-footer">
-                  <div class="accessory-price">$88</div>
-                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="ProPeloton Jersey">Add to Bag</button>
+                  <div class="accessory-price">$78</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="IronFold Folding Lock">Add to Bag</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- 6: GelVent Ergonomic Riding Gloves -->
-          <div class="col-lg-3 col-md-6">
-            <div class="accessory-card">
-              <div class="accessory-card-img-wrapper">
-                <img src="assets/images/accessories/gloves-pro.jpg" alt="GelVent Ergonomic Riding Gloves" class="accessory-card-img">
-              </div>
-              <div class="accessory-card-body">
-                <span class="accessory-category">Apparel</span>
-                <h3 class="accessory-card-title"><a href="accessory-details.html">GelVent Riding Gloves</a></h3>
-                <p class="small text-muted mb-2">Targeted ulnar nerve gel padding to relieve numbness and enhance bar grip.</p>
-                <div class="accessory-meta-specs">
-                  <span class="accessory-spec-item"><i class="bi bi-hand-thumbs-up text-primary"></i> Anti-Numb</span>
-                  <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> S, M, L, XL</span>
-                </div>
-                <div class="accessory-card-footer">
-                  <div class="accessory-price">$34</div>
-                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="GelVent Gloves">Add to Bag</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 7: AeroWedge Waterproof Saddle Bag -->
-          <div class="col-lg-3 col-md-6">
-            <div class="accessory-card">
+          <!-- 10: AeroWedge Waterproof Saddle Bag -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="bags">
+            <div class="accessory-card" data-category="bags">
               <div class="accessory-card-img-wrapper">
                 <img src="assets/images/accessories/bag-saddle.jpg" alt="AeroWedge Waterproof Saddle Bag" class="accessory-card-img">
               </div>
               <div class="accessory-card-body">
                 <span class="accessory-category">Bags & Storage</span>
                 <h3 class="accessory-card-title"><a href="accessory-details.html">AeroWedge Saddle Bag</a></h3>
-                <p class="small text-muted mb-2">0.8L weatherproof storage for spare tube, tire levers, and CO2 canisters.</p>
+                <p class="small text-muted mb-2">0.8L weatherproof storage for spare tube, tire levers, multi-tool, and CO2 canisters.</p>
                 <div class="accessory-meta-specs">
                   <span class="accessory-spec-item"><i class="bi bi-water text-primary"></i> IPX6 Waterproof</span>
                   <span class="accessory-spec-item"><i class="bi bi-box text-primary"></i> 0.8L Cap</span>
@@ -363,16 +453,38 @@
             </div>
           </div>
 
-          <!-- 8: AirPressure Pro Track Floor Pump -->
-          <div class="col-lg-3 col-md-6">
-            <div class="accessory-card">
+          <!-- 11: ApexFrame Aerodynamic Top-Tube Bag -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="bags">
+            <div class="accessory-card" data-category="bags">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/pages/gear_checklist-2.png" alt="ApexFrame Aerodynamic Top-Tube Bag" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Bags & Storage</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">ApexFrame Top-Tube Bag</a></h3>
+                <p class="small text-muted mb-2">Streamlined waterproof cockpit storage with quick one-hand magnetic zipper and power cable port.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-lightning text-primary"></i> Cable Port</span>
+                  <span class="accessory-spec-item"><i class="bi bi-box text-primary"></i> 1.2L Cap</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$44</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="ApexFrame Bag">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12: AirPressure Pro Track Floor Pump -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="pumps">
+            <div class="accessory-card" data-category="pumps">
               <div class="accessory-card-img-wrapper">
                 <img src="assets/images/pages/air_pump.png" alt="AirPressure Pro Track Floor Pump" class="accessory-card-img">
               </div>
               <div class="accessory-card-body">
-                <span class="accessory-category">Pumps & Maintenance</span>
+                <span class="accessory-category">Pumps & Inflation</span>
                 <h3 class="accessory-card-title"><a href="accessory-details.html">AirPressure Pro Floor Pump</a></h3>
-                <p class="small text-muted mb-2">160 PSI floor pump with a large gauge and dual-valve head.</p>
+                <p class="small text-muted mb-2">160 PSI workshop floor pump with oversized analog pressure gauge and auto Presta/Schrader head.</p>
                 <div class="accessory-meta-specs">
                   <span class="accessory-spec-item"><i class="bi bi-speedometer2 text-primary"></i> 160 PSI Max</span>
                   <span class="accessory-spec-item"><i class="bi bi-check2 text-primary"></i> Dual Head</span>
@@ -380,6 +492,94 @@
                 <div class="accessory-card-footer">
                   <div class="accessory-price">$54</div>
                   <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="AirPressure Floor Pump">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13: PrecisionPro 18-in-1 Chain Multi-Tool -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="tools">
+            <div class="accessory-card" data-category="tools">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/pages/gear_checklist-3.png" alt="PrecisionPro 18-in-1 Chain Multi-Tool" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Tools & Maintenance</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">PrecisionPro 18-in-1 Multi-Tool</a></h3>
+                <p class="small text-muted mb-2">Hardened Chrome-Vanadium alloy with 2–8mm hex keys, T25 Torx, chain tool, and spoke wrenches.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-wrench text-primary"></i> 18 Functions</span>
+                  <span class="accessory-spec-item"><i class="bi bi-link text-primary"></i> Chain Breaker</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$42</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="PrecisionPro Multi-Tool">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 14: VeloNav 500 Color GPS Computer -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="gps">
+            <div class="accessory-card" data-category="gps">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/pages/gear_checklist-4.png" alt="VeloNav 500 Color GPS Computer" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">GPS Trackers</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">VeloNav 500 Color GPS</a></h3>
+                <p class="small text-muted mb-2">High-contrast 2.8" color screen with turn-by-turn routing, Strava live segments, and crash detection.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-map text-primary"></i> Live Maps</span>
+                  <span class="accessory-spec-item"><i class="bi bi-battery-full text-primary"></i> 24h Battery</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$219</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="VeloNav 500 GPS">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 15: AeroCockpit Pro GPS Handlebar Tracker -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="gps">
+            <div class="accessory-card" data-category="gps">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/bike-computer.jpg" alt="AeroCockpit Pro GPS Handlebar Tracker" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">GPS Trackers</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">AeroCockpit Pro GPS</a></h3>
+                <p class="small text-muted mb-2">Aerodynamic out-front carbon mount computer with live rider group tracking and power telemetry.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-geo-alt text-primary"></i> Multi-GNSS</span>
+                  <span class="accessory-spec-item"><i class="bi bi-activity text-primary"></i> Power Sync</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$289</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="AeroCockpit Pro GPS">Add to Bag</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 16: ProPeloton Aero Thermal Jersey -->
+          <div class="col-lg-3 col-md-6 accessory-item-col" data-category="apparel">
+            <div class="accessory-card" data-category="apparel">
+              <div class="accessory-card-img-wrapper">
+                <img src="assets/images/accessories/apparel-jersey.jpg" alt="ProPeloton Aero Thermal Jersey" class="accessory-card-img">
+              </div>
+              <div class="accessory-card-body">
+                <span class="accessory-category">Apparel</span>
+                <h3 class="accessory-card-title"><a href="accessory-details.html">ProPeloton Aero Jersey</a></h3>
+                <p class="small text-muted mb-2">Breathable moisture-wicking fabric with silicone waist gripper and 3 reinforced rear cargo pockets.</p>
+                <div class="accessory-meta-specs">
+                  <span class="accessory-spec-item"><i class="bi bi-droplet text-primary"></i> Quick-Dry</span>
+                  <span class="accessory-spec-item"><i class="bi bi-rulers text-primary"></i> S–XXL</span>
+                </div>
+                <div class="accessory-card-footer">
+                  <div class="accessory-price">$88</div>
+                  <button type="button" class="btn-custom btn-primary-custom btn-sm-custom add-to-cart-btn" data-name="ProPeloton Jersey">Add to Bag</button>
                 </div>
               </div>
             </div>

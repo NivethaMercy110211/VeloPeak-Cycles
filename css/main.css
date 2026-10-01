@@ -634,6 +634,35 @@ main :is(.feature-card, .package-card, .process-step-card, .product-card, .acces
   border-color: var(--color-primary);
 }
 
+/* Keep the curated bundle content rows aligned when descriptions wrap differently. */
+.curated-bundle-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.curated-bundle-description {
+  height: 4.8em;
+  overflow-wrap: anywhere;
+}
+
+.curated-bundle-body .add-to-cart-btn {
+  margin-top: auto !important;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .curated-bundle-description {
+    height: 6.4em;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .curated-bundle-description {
+    height: auto;
+  }
+}
+
 .feature-icon-wrapper {
   width: 56px;
   height: 56px;
@@ -702,9 +731,11 @@ main :is(.feature-card, .package-card, .process-step-card, .product-card, .acces
   min-height: 40px;
   margin-top: auto;
   padding: 8px 16px;
-  border: 1px solid var(--color-primary);
+  border: 2px solid #963411;
   border-radius: var(--radius-full);
-  background: var(--color-primary-light);
+  background: #963411;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(150, 52, 17, 0.22);
   line-height: 1.35;
   white-space: nowrap;
   text-decoration: none;
@@ -713,7 +744,18 @@ main :is(.feature-card, .package-card, .process-step-card, .product-card, .acces
 
 .contact-card-link:hover {
   color: #FFFFFF !important;
-  background: var(--color-primary);
+  background: #202426;
+  border-color: #202426;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgba(32, 36, 38, 0.22);
+}
+
+.contact-card-link:focus-visible {
+  color: #FFFFFF !important;
+  background: #202426;
+  border-color: #202426;
+  outline: 3px solid rgba(166, 61, 24, 0.28);
+  outline-offset: 3px;
 }
 
 /* Badges — all unified to the VeloPeak brand primary orange */

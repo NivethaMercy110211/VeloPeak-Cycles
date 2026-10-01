@@ -27,6 +27,20 @@
   --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
+[data-theme="dark"] .contact-card-link,
+[data-bs-theme="dark"] .contact-card-link {
+  color: #202426 !important;
+  background: #FFAA86;
+  border-color: #FFAA86;
+}
+
+[data-theme="dark"] .contact-card-link:is(:hover, :focus-visible),
+[data-bs-theme="dark"] .contact-card-link:is(:hover, :focus-visible) {
+  color: #202426 !important;
+  background: #FFAA86;
+  border-color: #FFAA86;
+}
+
 /* Keep Bootstrap utility surfaces and text readable in dark mode. */
 [data-theme="dark"] body,
 [data-bs-theme="dark"] body {
@@ -206,4 +220,10 @@
 [data-bs-theme="dark"] .acc-cat-item:hover .acc-cat-icon,
 [data-bs-theme="dark"] .acc-cat-item.active .acc-cat-icon {
   background: var(--bg-card);
+}
+
+[data-theme="dark"] .acc-cat-thumb,
+[data-bs-theme="dark"] .acc-cat-thumb {
+  background: var(--bg-card);
+  border-color: var(--border-color);
 }
