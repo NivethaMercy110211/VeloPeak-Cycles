@@ -84,7 +84,7 @@
   font-size: 0.9375rem;
   font-weight: 600;
   color: var(--text-heading);
-  padding: 8px 14px !important;
+  padding: 11px 14px !important;
   border-radius: var(--radius-sm);
   transition: color var(--transition-fast), background-color var(--transition-fast);
 }

@@ -31,7 +31,8 @@
 .package-ribbon {
   position: absolute;
   top: -12px;
-  right: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--color-primary);
   color: #FFFFFF;
   font-size: 0.75rem;
